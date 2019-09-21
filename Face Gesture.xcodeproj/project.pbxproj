@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		82980E7123365324005F24EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82980E7023365324005F24EB /* AppDelegate.swift */; };
-		82980E7323365324005F24EB /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 82980E7223365324005F24EB /* art.scnassets */; };
 		82980E7523365324005F24EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82980E7423365324005F24EB /* ViewController.swift */; };
 		82980E7823365324005F24EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82980E7623365324005F24EB /* Main.storyboard */; };
 		82980E7A23365326005F24EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82980E7923365326005F24EB /* Assets.xcassets */; };
@@ -37,7 +36,6 @@
 /* Begin PBXFileReference section */
 		82980E6D23365324005F24EB /* Face Gesture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Face Gesture.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82980E7023365324005F24EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		82980E7223365324005F24EB /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		82980E7423365324005F24EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		82980E7723365324005F24EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		82980E7923365326005F24EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,7 +98,6 @@
 			isa = PBXGroup;
 			children = (
 				82980E7023365324005F24EB /* AppDelegate.swift */,
-				82980E7223365324005F24EB /* art.scnassets */,
 				82980E7423365324005F24EB /* ViewController.swift */,
 				82980E7623365324005F24EB /* Main.storyboard */,
 				82980E7923365326005F24EB /* Assets.xcassets */,
@@ -232,7 +229,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82980E7323365324005F24EB /* art.scnassets in Resources */,
 				82980E7D23365326005F24EB /* LaunchScreen.storyboard in Resources */,
 				82980E7A23365326005F24EB /* Assets.xcassets in Resources */,
 				82980E7823365324005F24EB /* Main.storyboard in Resources */,
