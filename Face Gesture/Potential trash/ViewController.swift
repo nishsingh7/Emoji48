@@ -15,21 +15,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet var sceneView: ARSCNView!
     @IBOutlet weak var outputLabel: UILabel!
     
-    enum Expression: String {
-        case tongueOut
-        case smiling
-        case puffedCheeks
-        case eyeRoll
-        case mouthOpen
-        case crossedEyed
-        case leftWink
-        case rightWink
-        case noseSneer
-        case mouthKiss
-        case none
-    }
-    
-    var currentState: Expression = .none { willSet { if newValue != self.currentState {
+    var currentState: Expression = .puffedCheeks { willSet { if newValue != self.currentState {
         DispatchQueue.main.async { self.outputLabel.text = newValue.rawValue }}}}
     
     override func viewDidLoad() {
@@ -106,8 +92,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             currentState = .noseSneer
         } else if mouthKiss?.decimalValue ?? 0.0 > 0.1 {
             currentState = .mouthKiss
-        } else {
-            currentState = .none
         }
     }
 }

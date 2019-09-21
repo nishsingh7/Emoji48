@@ -14,6 +14,10 @@
 		82980E7D23365326005F24EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82980E7B23365326005F24EB /* LaunchScreen.storyboard */; };
 		82980E8823365326005F24EB /* Face_GestureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82980E8723365326005F24EB /* Face_GestureTests.swift */; };
 		82980E9323365326005F24EB /* Face_GestureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82980E9223365326005F24EB /* Face_GestureUITests.swift */; };
+		82980EA123367912005F24EB /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82980EA023367912005F24EB /* GameVC.swift */; };
+		82980EA423367C06005F24EB /* Classifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82980EA323367C06005F24EB /* Classifier.swift */; };
+		82980EA623367CA0005F24EB /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82980EA523367CA0005F24EB /* Expression.swift */; };
+		82980EA923368A53005F24EB /* ExpressionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82980EA823368A53005F24EB /* ExpressionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		82980E8E23365326005F24EB /* Face GestureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Face GestureUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82980E9223365326005F24EB /* Face_GestureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Face_GestureUITests.swift; sourceTree = "<group>"; };
 		82980E9423365326005F24EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82980EA023367912005F24EB /* GameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
+		82980EA323367C06005F24EB /* Classifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classifier.swift; sourceTree = "<group>"; };
+		82980EA523367CA0005F24EB /* Expression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expression.swift; sourceTree = "<group>"; };
+		82980EA823368A53005F24EB /* ExpressionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpressionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +105,14 @@
 		82980E6F23365324005F24EB /* Face Gesture */ = {
 			isa = PBXGroup;
 			children = (
+				82980EA223367BE6005F24EB /* Alpha */,
 				82980E7023365324005F24EB /* AppDelegate.swift */,
-				82980E7423365324005F24EB /* ViewController.swift */,
+				82980EA823368A53005F24EB /* ExpressionCell.swift */,
 				82980E7623365324005F24EB /* Main.storyboard */,
-				82980E7923365326005F24EB /* Assets.xcassets */,
 				82980E7B23365326005F24EB /* LaunchScreen.storyboard */,
 				82980E7E23365326005F24EB /* Info.plist */,
+				82980E7923365326005F24EB /* Assets.xcassets */,
+				82980EA723367CB9005F24EB /* Potential trash */,
 			);
 			path = "Face Gesture";
 			sourceTree = "<group>";
@@ -123,6 +133,24 @@
 				82980E9423365326005F24EB /* Info.plist */,
 			);
 			path = "Face GestureUITests";
+			sourceTree = "<group>";
+		};
+		82980EA223367BE6005F24EB /* Alpha */ = {
+			isa = PBXGroup;
+			children = (
+				82980EA323367C06005F24EB /* Classifier.swift */,
+				82980EA523367CA0005F24EB /* Expression.swift */,
+				82980EA023367912005F24EB /* GameVC.swift */,
+			);
+			path = Alpha;
+			sourceTree = "<group>";
+		};
+		82980EA723367CB9005F24EB /* Potential trash */ = {
+			isa = PBXGroup;
+			children = (
+				82980E7423365324005F24EB /* ViewController.swift */,
+			);
+			path = "Potential trash";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +284,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82980EA423367C06005F24EB /* Classifier.swift in Sources */,
+				82980EA923368A53005F24EB /* ExpressionCell.swift in Sources */,
 				82980E7523365324005F24EB /* ViewController.swift in Sources */,
+				82980EA123367912005F24EB /* GameVC.swift in Sources */,
 				82980E7123365324005F24EB /* AppDelegate.swift in Sources */,
+				82980EA623367CA0005F24EB /* Expression.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
