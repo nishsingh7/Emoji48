@@ -58,33 +58,54 @@ class Classifier: UIView, ARSCNViewDelegate {
     
     func extractExpressions(anchor: ARFaceAnchor) -> [Expression]  {
         
-        let smileLeft = anchor.blendShapes[.mouthSmileLeft]
-        let smileRight = anchor.blendShapes[.mouthSmileRight]
-        let cheekPuff = anchor.blendShapes[.cheekPuff]
-        let tongue = anchor.blendShapes[.tongueOut]
-        let leftEyeUp = anchor.blendShapes[.eyeLookUpLeft]
-        let rightEyeUp = anchor.blendShapes[.eyeLookUpRight]
-        let mouthOpen = anchor.blendShapes[.mouthFunnel]
-        let leftEyeIn = anchor.blendShapes[.eyeLookInLeft]
-        let rightEyeIn = anchor.blendShapes[.eyeLookInRight]
-        let leftWink = anchor.blendShapes[.eyeBlinkLeft]
-        let rightWink = anchor.blendShapes[.eyeBlinkRight]
-        let noseSneerLeft = anchor.blendShapes[.noseSneerLeft]
-        let noseSneerRight = anchor.blendShapes[.noseSneerRight]
-        let mouthKiss = anchor.blendShapes[.mouthPucker]
+        // Mesh properties
+        let smileLeft = anchor.blendShapes[.mouthSmileLeft]?.decimalValue ?? 0.0
+        let smileRight = anchor.blendShapes[.mouthSmileRight]?.decimalValue ?? 0.0
+        let tongue = anchor.blendShapes[.tongueOut]?.decimalValue ?? 0.0
+        let leftEyeUp = anchor.blendShapes[.eyeLookUpLeft]?.decimalValue ?? 0.0
+        let rightEyeUp = anchor.blendShapes[.eyeLookUpRight]?.decimalValue ?? 0.0
+        let mouthFunnel = anchor.blendShapes[.mouthFunnel]?.decimalValue ?? 0.0
+        let leftEyeIn = anchor.blendShapes[.eyeLookInLeft]?.decimalValue ?? 0.0
+        let rightEyeIn = anchor.blendShapes[.eyeLookInRight]?.decimalValue ?? 0.0
+        let leftWink = anchor.blendShapes[.eyeSquintLeft]?.decimalValue ?? 0.0
+        let rightWink = anchor.blendShapes[.eyeSquintRight]?.decimalValue ?? 0.0
+        let mouthKiss = anchor.blendShapes[.mouthPucker]?.decimalValue ?? 0.0
+        let mouthClosed = anchor.blendShapes[.mouthClose]?.decimalValue ?? 0.0
+        
+        // Classifier functions
+        func mouthIsFunnelled() -> Bool { return mouthFunnel > 0.8 }
+        
+        func eyesAreRolled() -> Bool { return leftEyeUp > 0.8 && rightEyeUp > 0.8 }
+        
+        func eyesAreCrossed() -> Bool { return leftEyeIn > 0.7 && rightEyeIn > 0.7 }
+        
+        func tongueIsOut() -> Bool { return tongue > 0.8 }
+        
+        func mouthIsClosed() -> Bool { return mouthClosed > 0.8 }
+        
+        func isSideGlancing() -> Bool {
+            return true
+        }
+        
+        func isWinking() -> Bool { return (leftWink > 0.8 && rightWink < 0.3) || (rightWink > 0.8 && leftWink < 0.3) }
+        
+        func isPouting() -> Bool { return mouthKiss > 0.8 }
+        
+        func isSmiling() -> Bool { return smileLeft > 0.8 && smileRight > 0.8 }
         
         func expressionIsSatisfied(_ expression: Expression) -> Bool {
             switch expression {
-            case .tongueOut: return tongue?.decimalValue ?? 0.0 > 0.1
-            case .smiling: return ((smileLeft?.decimalValue ?? 0.0) + (smileRight?.decimalValue ?? 0.0)) > 0.9
-            case .puffedCheeks: return cheekPuff?.decimalValue ?? 0.0 > 0.3
-            case .eyeRoll: return ((leftEyeUp?.decimalValue ?? 0.0) + (rightEyeUp?.decimalValue ?? 0.0)) > 0.9
-            case .mouthOpen: return mouthOpen?.decimalValue ?? 0.0 > 0.3
-            case .crossedEyed: return ((leftEyeIn?.decimalValue ?? 0.0) + (rightEyeIn?.decimalValue ?? 0.0)) > 0.9
-            case .leftWink: return leftWink?.decimalValue ?? 0.0 > 0.1
-            case .rightWink: return rightWink?.decimalValue ?? 0.0 > 0.1
-            case .noseSneer: return ((noseSneerLeft?.decimalValue ?? 0.0) + (noseSneerRight?.decimalValue ?? 0.0)) > 0.9
-            case .mouthKiss: return mouthKiss?.decimalValue ?? 0.0 > 0.1
+            case .crazy: return (mouthIsFunnelled())
+            case .scream: return (mouthIsFunnelled() && eyesAreRolled())
+            case .money: return (tongueIsOut())
+            case .zip: return (mouthIsClosed())
+            case .eyeroll: return (eyesAreRolled())
+            case .silly: return (tongueIsOut() && eyesAreCrossed())
+            case .smirk: return (isSideGlancing())
+            case .wink: return (isWinking())
+            case .winkAndTongue: return (isWinking() && tongueIsOut())
+            case .kiss: return (isPouting() && isWinking())
+            case .happy: return (isSmiling())
             }
         }
         

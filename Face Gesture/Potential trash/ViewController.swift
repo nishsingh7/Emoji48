@@ -1,34 +1,61 @@
+////
+////  ViewController.swift
+////  Face Gesture
+////
+////  Created by Nish Singh on 21/09/2019.
+////  Copyright © 2019 Nish Singh. All rights reserved.
+////
 //
-//  ViewController.swift
-//  Face Gesture
-//
-//  Created by Nish Singh on 21/09/2019.
-//  Copyright © 2019 Nish Singh. All rights reserved.
-//
-
 import UIKit
 import SceneKit
 import ARKit
 
-class ViewController: UIViewController, ARSCNViewDelegate {
+class ViewController: UIViewController, ARSCNViewDelegate, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet var sceneView: ARSCNView!
-    @IBOutlet weak var outputLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
-    var currentState: Expression = .puffedCheeks { willSet { if newValue != self.currentState {
-        DispatchQueue.main.async { self.outputLabel.text = newValue.rawValue }}}}
+    let metrics = ["eyeLookUpLeft", "eyeLookUpRight", "eyeLookInLeft", "eyeLookOutLeft", "eyeLookInRight", "eyeLookOutRight", "eyeWideLeft", "eyeWideRight", "eyeSquintLeft", "eyeSquintRight", "eyeBlinkLeft", "eyeBlinkRight", "mouthSmileLeft", "mouthSmileRight", "mouthFunnel", "mouthPucker", "mouthClose", "tongueOut"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         sceneView.delegate = self
+        tableView.allowsSelection = false
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return metrics.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! MetricCell
+        cell.label.text = metrics[indexPath.item]
+        cell.progressView.progress = 0.0
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
+    }
+    
+    func updatedMetrics(_ newMetrics: [Float]) {
+        DispatchQueue.main.async {
+            for i in 0 ... newMetrics.count {
+                if let cell = self.tableView.cellForRow(at: IndexPath(item: i, section: 0)) as? MetricCell {
+                    cell.progressView.progress = newMetrics[i]
+                    let progress = Double(Int(newMetrics[i] * 100)) / 100
+                    cell.progressLabel.text = String(progress)
+                }
+            }
+        }
+    }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let configuration = ARFaceTrackingConfiguration()
         sceneView.session.run(configuration)
     }
-    
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         sceneView.session.pause()
@@ -41,57 +68,43 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         node.geometry?.firstMaterial?.fillMode = .lines
         return node
     }
-    
+
     func session(_ session: ARSession, didFailWithError error: Error) { }
-    
+
     func sessionWasInterrupted(_ session: ARSession) { }
-    
+
     func sessionInterruptionEnded(_ session: ARSession) { }
-    
+
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
         if let faceAnchor = anchor as? ARFaceAnchor, let faceGeometry = node.geometry as? ARSCNFaceGeometry {
             faceGeometry.update(from: faceAnchor.geometry)
             extractExpression(anchor: faceAnchor)
         }
     }
-    
+
     func extractExpression(anchor: ARFaceAnchor) {
-    
-        let smileLeft = anchor.blendShapes[.mouthSmileLeft]
-        let smileRight = anchor.blendShapes[.mouthSmileRight]
-        let cheekPuff = anchor.blendShapes[.cheekPuff]
-        let tongue = anchor.blendShapes[.tongueOut]
-        let leftEyeUp = anchor.blendShapes[.eyeLookUpLeft]
-        let rightEyeUp = anchor.blendShapes[.eyeLookUpRight]
-        let mouthOpen = anchor.blendShapes[.mouthFunnel]
-        let leftEyeIn = anchor.blendShapes[.eyeLookInLeft]
-        let rightEyeIn = anchor.blendShapes[.eyeLookInRight]
-        let leftWink = anchor.blendShapes[.eyeBlinkLeft]
-        let rightWink = anchor.blendShapes[.eyeBlinkRight]
-        let noseSneerLeft = anchor.blendShapes[.noseSneerLeft]
-        let noseSneerRight = anchor.blendShapes[.noseSneerRight]
-        let mouthKiss = anchor.blendShapes[.mouthPucker]
         
-        if ((smileLeft?.decimalValue ?? 0.0) + (smileRight?.decimalValue ?? 0.0)) > 0.9 {
-            currentState = .smiling
-        } else if cheekPuff?.decimalValue ?? 0.0 > 0.3 {
-            currentState = .puffedCheeks
-        } else if tongue?.decimalValue ?? 0.0 > 0.1 {
-            currentState = .tongueOut
-        } else if ((leftEyeUp?.decimalValue ?? 0.0) + (rightEyeUp?.decimalValue ?? 0.0)) > 0.9  {
-            currentState = .eyeRoll
-        } else if mouthOpen?.decimalValue ?? 0.0 > 0.3 {
-            currentState = .mouthOpen
-        } else if ((leftEyeIn?.decimalValue ?? 0.0) + (rightEyeIn?.decimalValue ?? 0.0)) > 0.9 {
-            currentState = .crossedEyed
-        } else if leftWink?.decimalValue ?? 0.0 > 0.1 {
-            currentState = .leftWink
-        } else if rightWink?.decimalValue ?? 0.0 > 0.1 {
-            currentState = .rightWink
-        } else if ((noseSneerLeft?.decimalValue ?? 0.0) + (noseSneerRight?.decimalValue ?? 0.0)) > 0.9 {
-            currentState = .noseSneer
-        } else if mouthKiss?.decimalValue ?? 0.0 > 0.1 {
-            currentState = .mouthKiss
-        }
+        let eyeLookUpLeft = anchor.blendShapes[.eyeLookUpLeft]?.floatValue ?? 0.0
+        let eyeLookUpRight = anchor.blendShapes[.eyeLookUpRight]?.floatValue ?? 0.0
+        let eyeLookInLeft = anchor.blendShapes[.eyeLookInLeft]?.floatValue ?? 0.0
+        let eyeLookOutLeft = anchor.blendShapes[.eyeLookOutLeft]?.floatValue ?? 0.0
+        let eyeLookInRight = anchor.blendShapes[.eyeLookInRight]?.floatValue ?? 0.0
+        let eyeLookOutRight = anchor.blendShapes[.eyeLookOutRight]?.floatValue ?? 0.0
+        let eyeWideLeft = anchor.blendShapes[.eyeWideLeft]?.floatValue ?? 0.0
+        let eyeWideRight = anchor.blendShapes[.eyeWideRight]?.floatValue ?? 0.0
+        let eyeSquintLeft = anchor.blendShapes[.eyeSquintLeft]?.floatValue ?? 0.0
+        let eyeSquintRight = anchor.blendShapes[.eyeSquintRight]?.floatValue ?? 0.0
+        let eyeBlinkLeft = anchor.blendShapes[.eyeBlinkLeft]?.floatValue ?? 0.0
+        let eyeBlinkRight = anchor.blendShapes[.eyeBlinkRight]?.floatValue ?? 0.0
+        let mouthSmileLeft = anchor.blendShapes[.mouthSmileLeft]?.floatValue ?? 0.0
+        let mouthSmileRight = anchor.blendShapes[.mouthSmileRight]?.floatValue ?? 0.0
+        let mouthFunnel = anchor.blendShapes[.mouthFunnel]?.floatValue ?? 0.0
+        let mouthPucker = anchor.blendShapes[.mouthPucker]?.floatValue ?? 0.0
+        let mouthClose = anchor.blendShapes[.mouthClose]?.floatValue ?? 0.0
+        let tongueOut = anchor.blendShapes[.tongueOut]?.floatValue ?? 0.0
+        
+        let array = [eyeLookUpLeft, eyeLookUpRight, eyeLookInLeft, eyeLookOutLeft, eyeLookInRight, eyeLookOutRight, eyeWideLeft, eyeWideRight, eyeSquintLeft, eyeSquintRight, eyeBlinkLeft, eyeBlinkRight, mouthSmileLeft, mouthSmileRight, mouthFunnel, mouthPucker, mouthClose, tongueOut]
+        
+        updatedMetrics(array)
     }
 }
