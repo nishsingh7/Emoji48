@@ -56,12 +56,20 @@ class GameScene: SCNScene {
     
     private func setupLighting() {
         let light = SCNLight()
-        light.type = .omni
-        light.intensity = 1000
+        light.type = .probe
+        light.intensity = 1400
         let lightNode = SCNNode()
         lightNode.light = light
         lightNode.position = SCNVector3(-2, 1, 0)
         rootNode.addChildNode(lightNode)
+        
+//        light = SCNLight()
+//        light.type = .directional
+//        light.intensity = 3000
+//        lightNode = SCNNode()
+//        lightNode.light = light
+//        lightNode.position = SCNVector3(2, 1, 0)
+//        rootNode.addChildNode(lightNode)
     }
     
     private func setupCamera() {
@@ -86,7 +94,7 @@ class GameScene: SCNScene {
         
         cameraNode.constraints = [SCNLookAtConstraint(target: targetNode1)]
         
-        cameraNode.position = SCNVector3(-0.6, 0.5, 0)
+        cameraNode.position = SCNVector3(-0.65, 0.3, 0)
         rootNode.addChildNode(cameraNode)
     }
     
@@ -147,7 +155,7 @@ protocol GameSceneDelegate: class {
 }
 
 struct SceneGeometry {
-    static let laneWidth: CGFloat = 0.05
+    static let laneWidth: CGFloat = 0.02
     static let laneLength: CGFloat = 1.0
-    static let laneSpacing: CGFloat = 0.03
+    static let laneSpacing: CGFloat = 0.06
 }

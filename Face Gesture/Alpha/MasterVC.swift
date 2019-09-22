@@ -8,7 +8,7 @@
 
 import UIKit
 import SceneKit
-
+import AVFoundation
 
 class MasterVC: UIViewController {
 
@@ -25,6 +25,9 @@ class MasterVC: UIViewController {
     var emotionOverlayView: UIView? = nil
     
     var gameScene: GameScene?
+    
+    var backgroundPlayer: AVPlayer!
+    var backgroundPlayerLayer: AVPlayerLayer!
     
     // In-Play Score tracking
     var activeClassifications: [[CoinScoreClassification]] = []
@@ -46,9 +49,46 @@ class MasterVC: UIViewController {
         sceneView.scene = gameScene
         sceneView.backgroundColor = UIColor.clear
         sceneView.allowsCameraControl = false
+        self.setupBackgroundVideo()
         classifier.huntForExpression(expressions)
         
         AudioPlayer.shared.playSong(song)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 50) {
+            self.performSegue(withIdentifier: "finishSession", sender: self)
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        backgroundPlayer.play()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        backgroundPlayer.pause()
+    }
+    
+    @objc func setupBackgroundVideo() {
+        let backgroundVideoURL = Bundle.main.url(forResource: "bgvid1", withExtension: "mp4")
+        
+        backgroundPlayer = AVPlayer(url: backgroundVideoURL!)
+        backgroundPlayerLayer = AVPlayerLayer(player: backgroundPlayer)
+        backgroundPlayerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
+        backgroundPlayer.volume = 0
+        backgroundPlayer.actionAtItemEnd = AVPlayer.ActionAtItemEnd.none
+        
+        backgroundPlayerLayer.frame = view.layer.bounds
+        self.view.backgroundColor = UIColor.clear;
+        self.view.layer.insertSublayer(backgroundPlayerLayer, at: 0)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(playerItemDidReachEnd(notification:)),
+                                               name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
+                                               object: backgroundPlayer.currentItem)
+    }
+    
+    @objc func playerItemDidReachEnd(notification: NSNotification) {
+        let p: AVPlayerItem = notification.object as! AVPlayerItem
+        p.seek(to: CMTime.zero, completionHandler: nil)
     }
     
     private func setUpUI() {
@@ -63,6 +103,12 @@ class MasterVC: UIViewController {
     
     private func detectedExpression(_ expressions: [Expression]) {
         gameScene?.updatedExpression(expressions)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let final = segue.destination as? FinalViewController {
+            
+        }
     }
 }
 

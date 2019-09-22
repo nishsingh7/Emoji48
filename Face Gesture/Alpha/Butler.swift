@@ -74,6 +74,6 @@ enum Difficulty: String, CaseIterable {
 
 struct StyleSheet {
     static let positiveLaneColour = #colorLiteral(red: 0, green: 1, blue: 0, alpha: 1)
-    static let defaultLaneColour = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+    static let defaultLaneColour = #colorLiteral(red: 1, green: 0, blue: 0.4578366876, alpha: 1)
     static let coinColour = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
 }

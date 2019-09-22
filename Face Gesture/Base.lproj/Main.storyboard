@@ -168,9 +168,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screenshot 2019-09-22 at 16.38.28.png" translatesAutoresizingMaskIntoConstraints="NO" id="LqH-Q6-cYb">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </imageView>
                             <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yio-P3-IaD">
                                 <rect key="frame" x="0.0" y="144" width="414" height="752"/>
                             </sceneKitView>
@@ -228,7 +225,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6IK-zN-bPh" firstAttribute="trailing" secondItem="yth-TG-Se5" secondAttribute="trailing" id="4hg-VJ-siy"/>
-                            <constraint firstItem="LqH-Q6-cYb" firstAttribute="top" secondItem="Ke0-TZ-Tea" secondAttribute="top" id="6bB-uq-sWn"/>
                             <constraint firstItem="Yio-P3-IaD" firstAttribute="top" secondItem="BgG-7X-WXE" secondAttribute="bottom" constant="27" id="7km-hB-GJY"/>
                             <constraint firstAttribute="bottom" secondItem="Yio-P3-IaD" secondAttribute="bottom" id="CUG-oC-Qts"/>
                             <constraint firstItem="6IK-zN-bPh" firstAttribute="leading" secondItem="yth-TG-Se5" secondAttribute="leading" id="DmT-FU-JUa"/>
@@ -236,13 +232,10 @@
                             <constraint firstAttribute="trailingMargin" secondItem="BgG-7X-WXE" secondAttribute="trailing" constant="12" id="Il9-qm-IKm"/>
                             <constraint firstItem="BgG-7X-WXE" firstAttribute="leading" secondItem="Ke0-TZ-Tea" secondAttribute="leadingMargin" constant="13" id="O79-NF-S5V"/>
                             <constraint firstItem="BgG-7X-WXE" firstAttribute="top" secondItem="6IK-zN-bPh" secondAttribute="bottom" constant="24" id="RHv-AT-UhP"/>
-                            <constraint firstAttribute="bottom" secondItem="LqH-Q6-cYb" secondAttribute="bottom" id="SvC-AS-pia"/>
                             <constraint firstItem="Yio-P3-IaD" firstAttribute="top" secondItem="6IK-zN-bPh" secondAttribute="bottom" constant="53" id="VnZ-bh-4tj"/>
-                            <constraint firstItem="LqH-Q6-cYb" firstAttribute="leading" secondItem="yth-TG-Se5" secondAttribute="leading" id="aOw-ud-Abt"/>
                             <constraint firstItem="Yio-P3-IaD" firstAttribute="leading" secondItem="yth-TG-Se5" secondAttribute="leading" id="d7s-2N-shC"/>
                             <constraint firstItem="Yio-P3-IaD" firstAttribute="trailing" secondItem="yth-TG-Se5" secondAttribute="trailing" id="jgI-rq-lHb"/>
                             <constraint firstItem="6IK-zN-bPh" firstAttribute="top" secondItem="Ke0-TZ-Tea" secondAttribute="top" constant="41" id="sac-lT-iAU"/>
-                            <constraint firstAttribute="trailing" secondItem="LqH-Q6-cYb" secondAttribute="trailing" id="zqd-dj-ozE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yth-TG-Se5"/>
                     </view>
@@ -288,7 +281,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Screenshot 2019-09-22 at 16.38.28.png" width="706" height="496"/>
         <image name="close" width="48" height="48"/>
     </resources>
 </document>
