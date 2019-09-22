@@ -12,7 +12,6 @@ import SceneKit
 
 class MasterVC: UIViewController {
 
-
     // Injection parameters
     let expressions: [Expression] = [.crazy, .money, .wink, .kiss]
     let song: Song = .knightrider

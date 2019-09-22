@@ -14,11 +14,12 @@ class Lane: SCNNode {
     private let script: LaneScript
     private weak var delegate: LaneDelegate?
     private let laneIndex: Int
-    public var isCurrentlySatisfied = false
+    public var isCurrentlySatisfied = false { didSet { updatedSatisfiedState() }}
     private var updateLoop: Timer?
     
-    private let length: CGFloat = 1.0
-    private let width: CGFloat = 0.05
+    private var currentTime = 0.0
+    
+    private var laneMaterial: SCNMaterial?
 
     public init(laneIndex: Int, laneScript: LaneScript, delegate: LaneDelegate) {
         self.script = laneScript
@@ -26,14 +27,17 @@ class Lane: SCNNode {
         self.laneIndex = laneIndex
         super.init()
         
-        let laneGeom = SCNBox(width: width, height: width, length: length, chamferRadius: 0)
-        laneGeom.firstMaterial?.diffuse.contents = UIColor.blue
+        let laneGeom = SCNBox(width: SceneGeometry.laneWidth, height: SceneGeometry.laneWidth, length: SceneGeometry.laneLength, chamferRadius: 0)
+        laneMaterial = SCNMaterial()
+        laneMaterial?.diffuse.contents = UIColor.darkGray
+        laneGeom.firstMaterial = laneMaterial
         let lane = SCNNode(geometry: laneGeom)
         addChildNode(lane)
     }
     
     public func play() {
         // starts the 'conveyor belt' of coins from rolling, the offsets of which are described in self.script
+        currentTime = 0.0
         startUpdateLoop()
     }
     
@@ -49,9 +53,11 @@ class Lane: SCNNode {
     private func startUpdateLoop() {
         updateLoop = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { (_) in
             
-            
-            
         })
+    }
+    
+    private func updatedSatisfiedState() {
+        laneMaterial?.diffuse.contents = isCurrentlySatisfied ? UIColor.green : UIColor.red
     }
     
     private func generateDisc() {
