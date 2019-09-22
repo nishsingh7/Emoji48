@@ -22,11 +22,13 @@ class MasterVC: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var percentageLabel: UILabel!
     @IBOutlet weak var closeButton: UIButton!
+    var emotionOverlayView: UIView?
     
     var gameScene: GameScene?
     
-//    var coinClassification: [CoinScoreClassification]
-    
+    // In-Play Score tracking
+    var activeClassifications: [[CoinScoreClassification]] = []
+    var streakCount = 0
     
     private lazy var classifier: Classifier = {
         let object = Classifier(parent: self)
@@ -37,14 +39,21 @@ class MasterVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUI()
+        classifier.huntForExpression(expressions)
+
+        self.emotionOverlayView = EmotionOverlayView(emotion: .thumbsUp)
+        self.view.addSubview(self.emotionOverlayView!)
+        
+    }
+    
+    private func setUpUI() {
+        // Scene View
         let script: SongScript = Butler.generateSongScript(forSong: .knightrider, difficulty: .easy)!
         self.gameScene = GameScene(expressions: expressions, script: script, delegate: self)
         sceneView.scene = gameScene
         sceneView.allowsCameraControl = true
-        classifier.huntForExpression(expressions)
-    }
-    
-    private func setUpUI() {
+        
+        // Score Label
         scoreLabel.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         scoreLabel.backgroundColor = #colorLiteral(red: 0, green: 0.6714670062, blue: 0.6813778281, alpha: 0.5781525088)
         scoreLabel.clipsToBounds = true
@@ -60,8 +69,41 @@ class MasterVC: UIViewController {
 
 extension MasterVC : GameSceneDelegate {
     func didClassifyCoin(laneIndex: Int, classification: CoinScoreClassification) {
-        print("Coin Classified")
-//        coinClassificationp[laneIndex]
+        self.activeClassifications[laneIndex].append(classification)
+        
+        if classification == .missed {
+            // Reset active classification for lane
+            self.activeClassifications[laneIndex] = []
+            self.streakCount = 0
+            // CALL MISSED FUNCTION?
+            return
+        } else {
+            self.streakCount += 0
+        }
+        
+        // Action
+        if classification == .perfect {
+            self.gameScene?.exciteEmoji(atIndex: laneIndex)
+        }
+        
+        // Streak Actions
+        if self.activeClassifications[laneIndex].count > 3 {
+//            self.gameScene?.exciteEmojiMORE(atIndex: laneIndex)
+            self.emotionOverlayView = EmotionOverlayView(emotion: .thumbsUp)
+            self.view.addSubview(self.emotionOverlayView!)
+        }
+                
+        if streakCount > 10 {
+            // 10 streak! Thumbs up overlay.
+            
+        }
+        
+        if streakCount > 20 {
+            // 20 streak!
+            self.gameScene?.blowConfetti()
+        }
+        
     }
+    
 }
 

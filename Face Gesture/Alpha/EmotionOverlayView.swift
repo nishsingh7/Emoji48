@@ -9,9 +9,18 @@
 import UIKit
 
 class EmotionOverlayView: UIView {
+    
+    init(emotion: Emotion) {
+        super.init(frame: CGRect(x: 100, y: 100, width: 0, height: 0))
+        self.backgroundColor = UIColor.red
 
-    init(frame: CGRect, emotion: Emotion) {
-        super.init(frame: frame)
+        UIView.animate(withDuration: 2, animations: {
+            self.frame.size = CGSize(width: 100, height: 100)
+        })
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
+            self.removeFromSuperview()
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
