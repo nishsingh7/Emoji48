@@ -61,7 +61,14 @@ class Lane: SCNNode {
             // Check if any coin needs to be rewarded
             if self.isCurrentlySatisfied {
                 for item in self.coinsDisplayed {
-                    if item.key.position.z < -Float(SceneGeometry.laneLength) * 0.25 {
+                    
+                    let distanceFromTarget = item.key.position.z + Float(SceneGeometry.laneLength / 2)
+                    
+                    if distanceFromTarget < 0.1 {
+                        item.key.removeFromParentNode()
+                        self.coinsDisplayed[item.key] = nil
+                        self.delegate?.laneDidClassifyCoin(laneIndex: self.laneIndex, classification: .perfect)
+                    } else if distanceFromTarget < 0.25 {
                         item.key.removeFromParentNode()
                         self.coinsDisplayed[item.key] = nil
                         self.delegate?.laneDidClassifyCoin(laneIndex: self.laneIndex, classification: .hit)

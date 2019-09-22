@@ -13,9 +13,9 @@ import SceneKit
 class MasterVC: UIViewController {
 
     // Injection parameters
-    let expressions: [Expression] = [.sleepy, .eyeroll, .happy, .surprised]
-    let song: Song = .knightrider
-    let difficult: Difficulty = .easy
+    let expressions: [Expression] = [.sleepy, .eyeroll, .happy]
+    let song: Song = .easySong
+    let difficulty: Difficulty = .medium
 
     // Components
     @IBOutlet weak var sceneView: SCNView!
@@ -34,15 +34,14 @@ class MasterVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUI()
-        let script: SongScript = Butler.generateSongScript(forSong: .knightrider, difficulty: .easy)!
+        let script: SongScript = Butler.generateSongScript(forSong: song, difficulty: difficulty)!
         self.gameScene = GameScene(expressions: expressions, script: script, delegate: self)
         sceneView.backgroundColor = UIColor.clear
         sceneView.scene = gameScene
         sceneView.allowsCameraControl = false
         classifier.huntForExpression(expressions)
         
-        
-        
+        AudioPlayer.shared.playSong(song)
     }
     
     private func setUpUI() {
