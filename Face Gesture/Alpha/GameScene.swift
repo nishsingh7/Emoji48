@@ -48,11 +48,21 @@ class GameScene: SCNScene {
     }
     
     private func setupLighting() {
-        
+        let light = SCNLight()
+        light.type = .omni
+        let lightNode = SCNNode()
+        lightNode.light = light
+        lightNode.position = SCNVector3(0, 2, 0)
+        rootNode.addChildNode(lightNode)
     }
     
     private func setupCamera() {
-        
+        let camera = SCNCamera()
+        let cameraNode = SCNNode()
+        cameraNode.camera = camera
+        cameraNode.look(at: SCNVector3(0, 0, 0))
+        cameraNode.position = SCNVector3(-2, 2, 0)
+        rootNode.addChildNode(cameraNode)
     }
     
     private func setupObjects() {
