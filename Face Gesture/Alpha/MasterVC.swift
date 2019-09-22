@@ -35,10 +35,7 @@ class MasterVC: UIViewController {
     }
     
     private func detectedExpression(_ expressions: [Expression]) {
-        DispatchQueue.main.async {
-            for i in 0 ... self.expressions.count - 1 {
-            }
-        }
+        
     }
 }
 

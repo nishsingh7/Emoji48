@@ -7,13 +7,24 @@
 //
 
 import UIKit
+import SceneKit
 
-class TestViewController: UIViewController {
+class TestViewController: UIViewController, GameSceneDelegate {
+    
+    func didClassifyCoin(laneIndex: Int, classification: CoinScoreClassification) {
+        print("CLASSIFIED COIN \(classification.rawValue) on lane \(laneIndex)")
+    }
+    
+    @IBOutlet weak var sceneView: SCNView!
+    
+    var gameScene: GameScene!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if let script = Butler.generateSongScript(forSong: .knightrider, difficulty: .easy) {
-            print(script)
+            gameScene = GameScene(expressions: [.crazy, .eyeroll, .kiss, .silly], script: script, delegate: self)
+            sceneView.scene = gameScene
         }
     }
 }
