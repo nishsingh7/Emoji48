@@ -121,6 +121,7 @@
 		82980E6F23365324005F24EB /* Face Gesture */ = {
 			isa = PBXGroup;
 			children = (
+				C61661DD2337730E001BAB1B /* Emojis */,
 				82980EA223367BE6005F24EB /* Alpha */,
 				82980E7023365324005F24EB /* AppDelegate.swift */,
 				82980EA823368A53005F24EB /* ExpressionCell.swift */,
@@ -175,6 +176,51 @@
 				82980E7423365324005F24EB /* ViewController.swift */,
 			);
 			path = "Potential trash";
+			sourceTree = "<group>";
+		};
+		C61661DD2337730E001BAB1B /* Emojis */ = {
+			isa = PBXGroup;
+			children = (
+				C61661E0233773F1001BAB1B /* Example */,
+				C61661DE23377320001BAB1B /* Assets */,
+				C61661E32337742A001BAB1B /* EmojiBuilder.swift */,
+			);
+			path = Emojis;
+			sourceTree = "<group>";
+		};
+		C61661DE23377320001BAB1B /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				C61661DF23377324001BAB1B /* Gifs */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		C61661DF23377324001BAB1B /* Gifs */ = {
+			isa = PBXGroup;
+			children = (
+				C61661ED23377830001BAB1B /* crazy.gif */,
+				C61661EC23377830001BAB1B /* eyeroll.gif */,
+				C61661F023377831001BAB1B /* heart.gif */,
+				C61661EA23377830001BAB1B /* money.gif */,
+				C61661EE23377830001BAB1B /* scream.gif */,
+				C61661EB23377830001BAB1B /* silly.gif */,
+				C61661EF23377830001BAB1B /* sleepy.gif */,
+				C61661F123377831001BAB1B /* smirk.gif */,
+				C61661E923377830001BAB1B /* suprised.gif */,
+				C61661F223377831001BAB1B /* wink.gif */,
+				C61661E723377823001BAB1B /* happy.gif */,
+				C61661E52337754C001BAB1B /* kiss.gif */,
+			);
+			path = Gifs;
+			sourceTree = "<group>";
+		};
+		C61661E0233773F1001BAB1B /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				C61661E123377410001BAB1B /* EmojiSceneViewController.swift */,
+			);
+			path = Example;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,8 +327,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C61661F623377831001BAB1B /* eyeroll.gif in Resources */,
 				82980E7D23365326005F24EB /* LaunchScreen.storyboard in Resources */,
+				C61661F823377831001BAB1B /* scream.gif in Resources */,
+				C61661F723377831001BAB1B /* crazy.gif in Resources */,
+				C61661F923377831001BAB1B /* sleepy.gif in Resources */,
+				C61661FB23377831001BAB1B /* smirk.gif in Resources */,
 				82980EAD2336A294005F24EB /* Assets.xcassets in Resources */,
+				C61661FC23377831001BAB1B /* wink.gif in Resources */,
+				C61661F523377831001BAB1B /* silly.gif in Resources */,
+				C61661E823377823001BAB1B /* happy.gif in Resources */,
+				C61661FA23377831001BAB1B /* heart.gif in Resources */,
+				C61661F423377831001BAB1B /* money.gif in Resources */,
+				C61661E62337754C001BAB1B /* kiss.gif in Resources */,
 				82980E7823365324005F24EB /* Main.storyboard in Resources */,
 				825639C92336CE7E005462DF /* knightrider-easy.json in Resources */,
 			);
@@ -497,7 +554,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7EA2RMCCJ8;
+				DEVELOPMENT_TEAM = H48B3LHXGD;
 				INFOPLIST_FILE = "Face Gesture/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -515,7 +572,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7EA2RMCCJ8;
+				DEVELOPMENT_TEAM = H48B3LHXGD;
 				INFOPLIST_FILE = "Face Gesture/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
