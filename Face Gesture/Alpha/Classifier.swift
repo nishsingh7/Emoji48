@@ -43,7 +43,8 @@ class Classifier: UIView, ARSCNViewDelegate {
     }
     
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
-        let faceMesh = ARSCNFaceGeometry(device: sceneView.device!)
+        let device = MTLCreateSystemDefaultDevice()
+        let faceMesh = ARSCNFaceGeometry(device: device!)
         let node = SCNNode(geometry: faceMesh)
         node.geometry?.firstMaterial?.fillMode = .lines
         return node
