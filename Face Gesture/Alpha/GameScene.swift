@@ -25,7 +25,7 @@ class GameScene: SCNScene {
         self.script = script
         self.delegate = delegate
         super.init()
-        
+
         setupScene()
         
         for lane in lanes {
