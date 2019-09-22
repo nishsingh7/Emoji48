@@ -62,7 +62,7 @@ enum Difficulty: String, CaseIterable {
     
     var numberOfLanes: Int {
         switch self {
-        case .easy: return 2
+        case .easy: return 4
         case .medium: return 3
         case .hard: return 4
         }

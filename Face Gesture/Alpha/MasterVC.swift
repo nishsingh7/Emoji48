@@ -7,13 +7,19 @@
 //
 
 import UIKit
+import SceneKit
+
 
 class MasterVC: UIViewController {
-    
+
+
     // Injection parameters
     let expressions: [Expression] = [.crazy, .money, .wink]
     let song: Song = .knightrider
     let difficult: Difficulty = .easy
+
+    // Components
+    @IBOutlet var gameScene: GameScene?
     
     private lazy var classifier: Classifier = {
         let object = Classifier(parent: self)
@@ -23,6 +29,8 @@ class MasterVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let script: SongScript = Butler.generateSongScript(forSong: .knightrider, difficulty: .easy)!
+        self.gameScene = GameScene(expressions: [], script: script, delegate: self)
         classifier.huntForExpression(expressions)
     }
     
@@ -31,5 +39,11 @@ class MasterVC: UIViewController {
             for i in 0 ... self.expressions.count - 1 {
             }
         }
+    }
+}
+
+extension MasterVC : GameSceneDelegate {
+    func didClassifyCoin(laneIndex: Int, classification: CoinScoreClassification) {
+        print("Coin Classified")
     }
 }
