@@ -8,9 +8,15 @@
 
 import Foundation
 
-struct Prompt: Decodable {
-    let lane: Int
-    let offset: Float
+struct MusicSheet: Decodable {
+    let startOffset: Float
+    let bpm: Float
+    let beats: [Prompt]
+    
+    struct Prompt: Decodable {
+        let lane: Int
+        let offset: Float
+    }
 }
 
 struct SongScript {
@@ -18,5 +24,5 @@ struct SongScript {
 }
 
 struct LaneScript {
-    let offsets: [Float]
+    let offsets: [Int]
 }

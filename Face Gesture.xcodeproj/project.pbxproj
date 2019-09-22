@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F858118A49EB4B9C5194ACC /* Pods_Face_Gesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DA3EABDA7F45B13BFEACDA3 /* Pods_Face_Gesture.framework */; };
+		445ECB21FE7EC9300EE09093 /* Pods_Face_GestureTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A37A753B1EBB8F80295B785 /* Pods_Face_GestureTests.framework */; };
 		7A6A43AD23379BF100EE036B /* FinalStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A6A43AC23379BF100EE036B /* FinalStoryboard.storyboard */; };
 		7A6A43AF23379BFE00EE036B /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6A43AE23379BFE00EE036B /* FinalViewController.swift */; };
 		7A6A43B423379C1C00EE036B /* ShareVideoRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6A43B123379C1C00EE036B /* ShareVideoRenderer.swift */; };
@@ -31,6 +31,7 @@
 		7A6A43D52337CCF900EE036B /* bgvid3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7A6A43C82337CCF900EE036B /* bgvid3.mp4 */; };
 		7A6A43D62337CCF900EE036B /* bgvid3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7A6A43C82337CCF900EE036B /* bgvid3.mp4 */; };
 		7A6A43D72337CCF900EE036B /* bgvid3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7A6A43C82337CCF900EE036B /* bgvid3.mp4 */; };
+		822856A72337E431000A2EBA /* EmotionOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822856A62337E431000A2EBA /* EmotionOverlayView.swift */; };
 		825639C52336B5AA005462DF /* MetricCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825639C42336B5AA005462DF /* MetricCell.swift */; };
 		825639C72336CDF3005462DF /* Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825639C62336CDF3005462DF /* Prompt.swift */; };
 		825639C92336CE7E005462DF /* knightrider-easy.json in Resources */ = {isa = PBXBuildFile; fileRef = 825639C82336CE7E005462DF /* knightrider-easy.json */; };
@@ -45,12 +46,17 @@
 		825BF44823377F2C0040D9F0 /* wink.gif in Resources */ = {isa = PBXBuildFile; fileRef = 825BF43C23377F2C0040D9F0 /* wink.gif */; };
 		825BF44923377F2C0040D9F0 /* happy.gif in Resources */ = {isa = PBXBuildFile; fileRef = 825BF43D23377F2C0040D9F0 /* happy.gif */; };
 		825BF44A23377F2C0040D9F0 /* crazy.gif in Resources */ = {isa = PBXBuildFile; fileRef = 825BF43E23377F2C0040D9F0 /* crazy.gif */; };
-		825BF44B23377F2C0040D9F0 /* suprised.gif in Resources */ = {isa = PBXBuildFile; fileRef = 825BF43F23377F2C0040D9F0 /* suprised.gif */; };
+		825BF44B23377F2C0040D9F0 /* surprised.gif in Resources */ = {isa = PBXBuildFile; fileRef = 825BF43F23377F2C0040D9F0 /* surprised.gif */; };
 		825BF44C23377F2C0040D9F0 /* heart.gif in Resources */ = {isa = PBXBuildFile; fileRef = 825BF44023377F2C0040D9F0 /* heart.gif */; };
 		825BF44D23377F2C0040D9F0 /* smirk.gif in Resources */ = {isa = PBXBuildFile; fileRef = 825BF44123377F2C0040D9F0 /* smirk.gif */; };
 		825BF44E23377F2C0040D9F0 /* silly.gif in Resources */ = {isa = PBXBuildFile; fileRef = 825BF44223377F2C0040D9F0 /* silly.gif */; };
 		825BF45023377F380040D9F0 /* EmojiBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825BF44F23377F380040D9F0 /* EmojiBuilder.swift */; };
 		825BF45223377F3F0040D9F0 /* EmojiSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825BF45123377F3F0040D9F0 /* EmojiSceneViewController.swift */; };
+		825BF4542337CD6A0040D9F0 /* Screenshot 2019-09-22 at 16.38.28.png in Resources */ = {isa = PBXBuildFile; fileRef = 825BF4532337CD6A0040D9F0 /* Screenshot 2019-09-22 at 16.38.28.png */; };
+		825BF4562337D2500040D9F0 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825BF4552337D2500040D9F0 /* AudioPlayer.swift */; };
+		825BF4582337D42C0040D9F0 /* easySong-medium.json in Resources */ = {isa = PBXBuildFile; fileRef = 825BF4572337D42B0040D9F0 /* easySong-medium.json */; };
+		825BF45A2337D4320040D9F0 /* easySong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 825BF4592337D4320040D9F0 /* easySong.mp3 */; };
+		8283A8C12337E58A003DED9C /* easySong-hard.json in Resources */ = {isa = PBXBuildFile; fileRef = 8283A8C02337E58A003DED9C /* easySong-hard.json */; };
 		82980E7123365324005F24EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82980E7023365324005F24EB /* AppDelegate.swift */; };
 		82980E7523365324005F24EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82980E7423365324005F24EB /* ViewController.swift */; };
 		82980E7823365324005F24EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82980E7623365324005F24EB /* Main.storyboard */; };
@@ -62,10 +68,12 @@
 		82980EA923368A53005F24EB /* ExpressionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82980EA823368A53005F24EB /* ExpressionCell.swift */; };
 		82980EAD2336A294005F24EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82980EAC2336A294005F24EB /* Assets.xcassets */; };
 		82F33C0C23376C17006BA034 /* Lane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F33C0B23376C17006BA034 /* Lane.swift */; };
-		82F33C0E23377834006BA034 /* EmotionOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F33C0D23377834006BA034 /* EmotionOverlayView.swift */; };
 		82F33C1023377906006BA034 /* ClassifierVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F33C0F23377906006BA034 /* ClassifierVC.swift */; };
-		864620448534C4845342507E /* Pods_Face_GestureUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1A4DF6331D5601B75DADD89 /* Pods_Face_GestureUITests.framework */; };
-		CC132E54D2B8D5BB7A6B2B78 /* Pods_Face_GestureTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F82B7E050C19C0FD0D51A24 /* Pods_Face_GestureTests.framework */; };
+		9C9A0FA5F64766317628CE7A /* Pods_Face_GestureUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 651E02C43F89554BA9A6264F /* Pods_Face_GestureUITests.framework */; };
+		B0BDE562B034208DCD2BDCE4 /* Pods_Face_Gesture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F7AA2BEB29A4A67C2FD5FDD /* Pods_Face_Gesture.framework */; };
+		C6F9A2D82337C90F00F8CCC3 /* thumbsUp.gif in Resources */ = {isa = PBXBuildFile; fileRef = C6F9A2D72337C90F00F8CCC3 /* thumbsUp.gif */; };
+		C6F9A2DA2337CA5E00F8CCC3 /* confetti.gif in Resources */ = {isa = PBXBuildFile; fileRef = C6F9A2D92337CA5E00F8CCC3 /* confetti.gif */; };
+		C6F9A2DC2337CCB600F8CCC3 /* fire.gif in Resources */ = {isa = PBXBuildFile; fileRef = C6F9A2DB2337CCB600F8CCC3 /* fire.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,10 +94,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		09A7A5C824B443DF37A6D6A5 /* Pods-Face GestureTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Face GestureTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Face GestureTests/Pods-Face GestureTests.release.xcconfig"; sourceTree = "<group>"; };
-		0F82B7E050C19C0FD0D51A24 /* Pods_Face_GestureTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Face_GestureTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5C357D0899E2F115CF860B24 /* Pods-Face GestureUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Face GestureUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Face GestureUITests/Pods-Face GestureUITests.release.xcconfig"; sourceTree = "<group>"; };
-		6BB389A7B317AFC5D0830362 /* Pods-Face GestureUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Face GestureUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Face GestureUITests/Pods-Face GestureUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		24B36667EFC75354CD808426 /* Pods-Face GestureTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Face GestureTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Face GestureTests/Pods-Face GestureTests.debug.xcconfig"; sourceTree = "<group>"; };
+		32B84E66837E86F6BEE19556 /* Pods-Face GestureTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Face GestureTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Face GestureTests/Pods-Face GestureTests.release.xcconfig"; sourceTree = "<group>"; };
+		651E02C43F89554BA9A6264F /* Pods_Face_GestureUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Face_GestureUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A37A753B1EBB8F80295B785 /* Pods_Face_GestureTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Face_GestureTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A6A43AC23379BF100EE036B /* FinalStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FinalStoryboard.storyboard; sourceTree = "<group>"; };
 		7A6A43AE23379BFE00EE036B /* FinalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
 		7A6A43B123379C1C00EE036B /* ShareVideoRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareVideoRenderer.swift; sourceTree = "<group>"; };
@@ -102,6 +110,8 @@
 		7A6A43C72337CCF600EE036B /* bgvid2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = bgvid2.mp4; sourceTree = "<group>"; };
 		7A6A43C82337CCF900EE036B /* bgvid3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = bgvid3.mp4; sourceTree = "<group>"; };
 		7DA3EABDA7F45B13BFEACDA3 /* Pods_Face_Gesture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Face_Gesture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A95CAD30AB539A616610668 /* Pods-Face Gesture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Face Gesture.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Face Gesture/Pods-Face Gesture.debug.xcconfig"; sourceTree = "<group>"; };
+		822856A62337E431000A2EBA /* EmotionOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionOverlayView.swift; sourceTree = "<group>"; };
 		825639C42336B5AA005462DF /* MetricCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricCell.swift; sourceTree = "<group>"; };
 		825639C62336CDF3005462DF /* Prompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prompt.swift; sourceTree = "<group>"; };
 		825639C82336CE7E005462DF /* knightrider-easy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "knightrider-easy.json"; sourceTree = "<group>"; };
@@ -116,12 +126,17 @@
 		825BF43C23377F2C0040D9F0 /* wink.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = wink.gif; sourceTree = "<group>"; };
 		825BF43D23377F2C0040D9F0 /* happy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = happy.gif; sourceTree = "<group>"; };
 		825BF43E23377F2C0040D9F0 /* crazy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = crazy.gif; sourceTree = "<group>"; };
-		825BF43F23377F2C0040D9F0 /* suprised.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = suprised.gif; sourceTree = "<group>"; };
+		825BF43F23377F2C0040D9F0 /* surprised.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = surprised.gif; sourceTree = "<group>"; };
 		825BF44023377F2C0040D9F0 /* heart.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = heart.gif; sourceTree = "<group>"; };
 		825BF44123377F2C0040D9F0 /* smirk.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = smirk.gif; sourceTree = "<group>"; };
 		825BF44223377F2C0040D9F0 /* silly.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = silly.gif; sourceTree = "<group>"; };
 		825BF44F23377F380040D9F0 /* EmojiBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiBuilder.swift; sourceTree = "<group>"; };
 		825BF45123377F3F0040D9F0 /* EmojiSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiSceneViewController.swift; sourceTree = "<group>"; };
+		825BF4532337CD6A0040D9F0 /* Screenshot 2019-09-22 at 16.38.28.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot 2019-09-22 at 16.38.28.png"; sourceTree = "<group>"; };
+		825BF4552337D2500040D9F0 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		825BF4572337D42B0040D9F0 /* easySong-medium.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "easySong-medium.json"; sourceTree = "<group>"; };
+		825BF4592337D4320040D9F0 /* easySong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = easySong.mp3; sourceTree = "<group>"; };
+		8283A8C02337E58A003DED9C /* easySong-hard.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "easySong-hard.json"; sourceTree = "<group>"; };
 		82980E6D23365324005F24EB /* Face Gesture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Face Gesture.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82980E7023365324005F24EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82980E7423365324005F24EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -139,12 +154,14 @@
 		82980EA823368A53005F24EB /* ExpressionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpressionCell.swift; sourceTree = "<group>"; };
 		82980EAC2336A294005F24EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82F33C0B23376C17006BA034 /* Lane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lane.swift; sourceTree = "<group>"; };
-		82F33C0D23377834006BA034 /* EmotionOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionOverlayView.swift; sourceTree = "<group>"; };
 		82F33C0F23377906006BA034 /* ClassifierVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifierVC.swift; sourceTree = "<group>"; };
-		96478BAB8C6FA63E4B03EFEC /* Pods-Face Gesture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Face Gesture.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Face Gesture/Pods-Face Gesture.debug.xcconfig"; sourceTree = "<group>"; };
-		987BF2439BA48139264C0C40 /* Pods-Face GestureTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Face GestureTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Face GestureTests/Pods-Face GestureTests.debug.xcconfig"; sourceTree = "<group>"; };
-		D13B7A57522A60EE7391A9DB /* Pods-Face Gesture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Face Gesture.release.xcconfig"; path = "Pods/Target Support Files/Pods-Face Gesture/Pods-Face Gesture.release.xcconfig"; sourceTree = "<group>"; };
-		D1A4DF6331D5601B75DADD89 /* Pods_Face_GestureUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Face_GestureUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F7AA2BEB29A4A67C2FD5FDD /* Pods_Face_Gesture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Face_Gesture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6F9A2D72337C90F00F8CCC3 /* thumbsUp.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = thumbsUp.gif; sourceTree = "<group>"; };
+		C6F9A2D92337CA5E00F8CCC3 /* confetti.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = confetti.gif; sourceTree = "<group>"; };
+		C6F9A2DB2337CCB600F8CCC3 /* fire.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = fire.gif; sourceTree = "<group>"; };
+		E8F6D4F98F5C54DD41FD373F /* Pods-Face GestureUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Face GestureUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Face GestureUITests/Pods-Face GestureUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E972ECD591AD9D422FAF506C /* Pods-Face GestureUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Face GestureUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Face GestureUITests/Pods-Face GestureUITests.release.xcconfig"; sourceTree = "<group>"; };
+		EA329F39EC6770479B9E92B9 /* Pods-Face Gesture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Face Gesture.release.xcconfig"; path = "Pods/Target Support Files/Pods-Face Gesture/Pods-Face Gesture.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,7 +169,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F858118A49EB4B9C5194ACC /* Pods_Face_Gesture.framework in Frameworks */,
+				B0BDE562B034208DCD2BDCE4 /* Pods_Face_Gesture.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,7 +177,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC132E54D2B8D5BB7A6B2B78 /* Pods_Face_GestureTests.framework in Frameworks */,
+				445ECB21FE7EC9300EE09093 /* Pods_Face_GestureTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,34 +185,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				864620448534C4845342507E /* Pods_Face_GestureUITests.framework in Frameworks */,
+				9C9A0FA5F64766317628CE7A /* Pods_Face_GestureUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		52CE54CDFDF783C4F7D79EC9 /* Pods */ = {
+		2FCF39DE7BAB6F038EFF492F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				96478BAB8C6FA63E4B03EFEC /* Pods-Face Gesture.debug.xcconfig */,
-				D13B7A57522A60EE7391A9DB /* Pods-Face Gesture.release.xcconfig */,
-				987BF2439BA48139264C0C40 /* Pods-Face GestureTests.debug.xcconfig */,
-				09A7A5C824B443DF37A6D6A5 /* Pods-Face GestureTests.release.xcconfig */,
-				6BB389A7B317AFC5D0830362 /* Pods-Face GestureUITests.debug.xcconfig */,
-				5C357D0899E2F115CF860B24 /* Pods-Face GestureUITests.release.xcconfig */,
+				7A95CAD30AB539A616610668 /* Pods-Face Gesture.debug.xcconfig */,
+				EA329F39EC6770479B9E92B9 /* Pods-Face Gesture.release.xcconfig */,
+				24B36667EFC75354CD808426 /* Pods-Face GestureTests.debug.xcconfig */,
+				32B84E66837E86F6BEE19556 /* Pods-Face GestureTests.release.xcconfig */,
+				E8F6D4F98F5C54DD41FD373F /* Pods-Face GestureUITests.debug.xcconfig */,
+				E972ECD591AD9D422FAF506C /* Pods-Face GestureUITests.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		70794904EBF4F212F69CC5E8 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7DA3EABDA7F45B13BFEACDA3 /* Pods_Face_Gesture.framework */,
-				0F82B7E050C19C0FD0D51A24 /* Pods_Face_GestureTests.framework */,
-				D1A4DF6331D5601B75DADD89 /* Pods_Face_GestureUITests.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		7A6A43B023379C0300EE036B /* Recording */ = {
@@ -243,8 +250,8 @@
 				82980E8623365326005F24EB /* Face GestureTests */,
 				82980E9123365326005F24EB /* Face GestureUITests */,
 				82980E6E23365324005F24EB /* Products */,
-				52CE54CDFDF783C4F7D79EC9 /* Pods */,
-				70794904EBF4F212F69CC5E8 /* Frameworks */,
+				2FCF39DE7BAB6F038EFF492F /* Pods */,
+				F8456AAE2C1EB04C7E2E0EC1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -273,10 +280,15 @@
 				825639C42336B5AA005462DF /* MetricCell.swift */,
 				82980E7623365324005F24EB /* Main.storyboard */,
 				825639CA2336CEA7005462DF /* TestViewController.swift */,
+				822856A62337E431000A2EBA /* EmotionOverlayView.swift */,
 				82F33C0F23377906006BA034 /* ClassifierVC.swift */,
 				82980E7B23365326005F24EB /* LaunchScreen.storyboard */,
 				82980E7E23365326005F24EB /* Info.plist */,
 				82980EAC2336A294005F24EB /* Assets.xcassets */,
+				825BF4532337CD6A0040D9F0 /* Screenshot 2019-09-22 at 16.38.28.png */,
+				825BF4592337D4320040D9F0 /* easySong.mp3 */,
+				825BF4572337D42B0040D9F0 /* easySong-medium.json */,
+				8283A8C02337E58A003DED9C /* easySong-hard.json */,
 				825639C82336CE7E005462DF /* knightrider-easy.json */,
 				82980EA723367CB9005F24EB /* Potential trash */,
 			);
@@ -304,13 +316,14 @@
 		82980EA223367BE6005F24EB /* Alpha */ = {
 			isa = PBXGroup;
 			children = (
+				C68538832337B7DD00A72BF2 /* EmotionOverlay */,
 				82980EA323367C06005F24EB /* Classifier.swift */,
 				82980EA023367912005F24EB /* MasterVC.swift */,
 				825639CC2336D3FB005462DF /* Butler.swift */,
 				825639C62336CDF3005462DF /* Prompt.swift */,
 				825639CE2336E666005462DF /* GameScene.swift */,
 				82F33C0B23376C17006BA034 /* Lane.swift */,
-				82F33C0D23377834006BA034 /* EmotionOverlayView.swift */,
+				825BF4552337D2500040D9F0 /* AudioPlayer.swift */,
 			);
 			path = Alpha;
 			sourceTree = "<group>";
@@ -344,6 +357,9 @@
 		C61661DF23377324001BAB1B /* Gifs */ = {
 			isa = PBXGroup;
 			children = (
+				C6F9A2DB2337CCB600F8CCC3 /* fire.gif */,
+				C6F9A2D92337CA5E00F8CCC3 /* confetti.gif */,
+				C6F9A2D72337C90F00F8CCC3 /* thumbsUp.gif */,
 				825BF43E23377F2C0040D9F0 /* crazy.gif */,
 				825BF43823377F2C0040D9F0 /* eyeroll.gif */,
 				825BF43D23377F2C0040D9F0 /* happy.gif */,
@@ -354,7 +370,7 @@
 				825BF44223377F2C0040D9F0 /* silly.gif */,
 				825BF43723377F2B0040D9F0 /* sleepy.gif */,
 				825BF44123377F2C0040D9F0 /* smirk.gif */,
-				825BF43F23377F2C0040D9F0 /* suprised.gif */,
+				825BF43F23377F2C0040D9F0 /* surprised.gif */,
 				825BF43C23377F2C0040D9F0 /* wink.gif */,
 			);
 			path = Gifs;
@@ -368,6 +384,23 @@
 			path = Example;
 			sourceTree = "<group>";
 		};
+		C68538832337B7DD00A72BF2 /* EmotionOverlay */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = EmotionOverlay;
+			sourceTree = "<group>";
+		};
+		F8456AAE2C1EB04C7E2E0EC1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F7AA2BEB29A4A67C2FD5FDD /* Pods_Face_Gesture.framework */,
+				6A37A753B1EBB8F80295B785 /* Pods_Face_GestureTests.framework */,
+				651E02C43F89554BA9A6264F /* Pods_Face_GestureUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -375,11 +408,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 82980E9723365326005F24EB /* Build configuration list for PBXNativeTarget "Face Gesture" */;
 			buildPhases = (
-				1A47D888267243EF866CE3CB /* [CP] Check Pods Manifest.lock */,
+				EDCCB8CDCCBC13CC6B36D220 /* [CP] Check Pods Manifest.lock */,
 				82980E6923365324005F24EB /* Sources */,
 				82980E6A23365324005F24EB /* Frameworks */,
 				82980E6B23365324005F24EB /* Resources */,
-				857B25D99C66ECB95CADDD87 /* [CP] Embed Pods Frameworks */,
+				639A6FA3D2E82442AA6C6774 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -394,7 +427,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 82980E9A23365326005F24EB /* Build configuration list for PBXNativeTarget "Face GestureTests" */;
 			buildPhases = (
-				317112FBEA9AA4125CB0312C /* [CP] Check Pods Manifest.lock */,
+				D843D3EAD697D5285128BE0C /* [CP] Check Pods Manifest.lock */,
 				82980E7F23365326005F24EB /* Sources */,
 				82980E8023365326005F24EB /* Frameworks */,
 				82980E8123365326005F24EB /* Resources */,
@@ -413,7 +446,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 82980E9D23365326005F24EB /* Build configuration list for PBXNativeTarget "Face GestureUITests" */;
 			buildPhases = (
-				135A12EDD6BE1C3D8DA90659 /* [CP] Check Pods Manifest.lock */,
+				BEA1B2A8DF7EF0D1D7C4E8C5 /* [CP] Check Pods Manifest.lock */,
 				82980E8A23365326005F24EB /* Sources */,
 				82980E8B23365326005F24EB /* Frameworks */,
 				82980E8C23365326005F24EB /* Resources */,
@@ -476,13 +509,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				825BF45A2337D4320040D9F0 /* easySong.mp3 in Resources */,
 				825BF44323377F2C0040D9F0 /* sleepy.gif in Resources */,
 				825BF44623377F2C0040D9F0 /* scream.gif in Resources */,
 				82980E7D23365326005F24EB /* LaunchScreen.storyboard in Resources */,
+				825BF4542337CD6A0040D9F0 /* Screenshot 2019-09-22 at 16.38.28.png in Resources */,
 				82980EAD2336A294005F24EB /* Assets.xcassets in Resources */,
+				C6F9A2DA2337CA5E00F8CCC3 /* confetti.gif in Resources */,
 				825BF44D23377F2C0040D9F0 /* smirk.gif in Resources */,
 				825BF44923377F2C0040D9F0 /* happy.gif in Resources */,
-				825BF44B23377F2C0040D9F0 /* suprised.gif in Resources */,
+				825BF44B23377F2C0040D9F0 /* surprised.gif in Resources */,
 				7A6A43AD23379BF100EE036B /* FinalStoryboard.storyboard in Resources */,
 				7A6A43C92337CCF900EE036B /* bgvid1.mp4 in Resources */,
 				7A6A43CF2337CCF900EE036B /* bgvid4.mp4 in Resources */,
@@ -490,14 +526,18 @@
 				7A6A43CC2337CCF900EE036B /* bgvid5.mp4 in Resources */,
 				825BF44A23377F2C0040D9F0 /* crazy.gif in Resources */,
 				7A6A43D22337CCF900EE036B /* bgvid2.mp4 in Resources */,
+				C6F9A2D82337C90F00F8CCC3 /* thumbsUp.gif in Resources */,
 				825BF44423377F2C0040D9F0 /* eyeroll.gif in Resources */,
+				8283A8C12337E58A003DED9C /* easySong-hard.json in Resources */,
 				7A6A43BC2337ADCE00EE036B /* GoogleService-Info.plist in Resources */,
 				825BF44E23377F2C0040D9F0 /* silly.gif in Resources */,
 				7A6A43D52337CCF900EE036B /* bgvid3.mp4 in Resources */,
+				825BF4582337D42C0040D9F0 /* easySong-medium.json in Resources */,
 				82980E7823365324005F24EB /* Main.storyboard in Resources */,
 				825BF44823377F2C0040D9F0 /* wink.gif in Resources */,
 				825BF44723377F2C0040D9F0 /* kiss.gif in Resources */,
 				825639C92336CE7E005462DF /* knightrider-easy.json in Resources */,
+				C6F9A2DC2337CCB600F8CCC3 /* fire.gif in Resources */,
 				825BF44C23377F2C0040D9F0 /* heart.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -531,73 +571,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		135A12EDD6BE1C3D8DA90659 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Face GestureUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1A47D888267243EF866CE3CB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Face Gesture-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		317112FBEA9AA4125CB0312C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Face GestureTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		857B25D99C66ECB95CADDD87 /* [CP] Embed Pods Frameworks */ = {
+		639A6FA3D2E82442AA6C6774 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -633,6 +607,72 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Face Gesture/Pods-Face Gesture-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BEA1B2A8DF7EF0D1D7C4E8C5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Face GestureUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D843D3EAD697D5285128BE0C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Face GestureTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EDCCB8CDCCBC13CC6B36D220 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Face Gesture-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -647,7 +687,8 @@
 				825BF45023377F380040D9F0 /* EmojiBuilder.swift in Sources */,
 				825639CD2336D3FB005462DF /* Butler.swift in Sources */,
 				82980EA923368A53005F24EB /* ExpressionCell.swift in Sources */,
-				82F33C0E23377834006BA034 /* EmotionOverlayView.swift in Sources */,
+				822856A72337E431000A2EBA /* EmotionOverlayView.swift in Sources */,
+				825BF4562337D2500040D9F0 /* AudioPlayer.swift in Sources */,
 				825639C52336B5AA005462DF /* MetricCell.swift in Sources */,
 				82980E7523365324005F24EB /* ViewController.swift in Sources */,
 				825BF45223377F3F0040D9F0 /* EmojiSceneViewController.swift in Sources */,
@@ -831,7 +872,7 @@
 		};
 		82980E9823365326005F24EB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 96478BAB8C6FA63E4B03EFEC /* Pods-Face Gesture.debug.xcconfig */;
+			baseConfigurationReference = 7A95CAD30AB539A616610668 /* Pods-Face Gesture.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -850,7 +891,7 @@
 		};
 		82980E9923365326005F24EB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D13B7A57522A60EE7391A9DB /* Pods-Face Gesture.release.xcconfig */;
+			baseConfigurationReference = EA329F39EC6770479B9E92B9 /* Pods-Face Gesture.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -869,7 +910,7 @@
 		};
 		82980E9B23365326005F24EB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 987BF2439BA48139264C0C40 /* Pods-Face GestureTests.debug.xcconfig */;
+			baseConfigurationReference = 24B36667EFC75354CD808426 /* Pods-Face GestureTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -891,7 +932,7 @@
 		};
 		82980E9C23365326005F24EB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 09A7A5C824B443DF37A6D6A5 /* Pods-Face GestureTests.release.xcconfig */;
+			baseConfigurationReference = 32B84E66837E86F6BEE19556 /* Pods-Face GestureTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -913,7 +954,7 @@
 		};
 		82980E9E23365326005F24EB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6BB389A7B317AFC5D0830362 /* Pods-Face GestureUITests.debug.xcconfig */;
+			baseConfigurationReference = E8F6D4F98F5C54DD41FD373F /* Pods-Face GestureUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -934,7 +975,7 @@
 		};
 		82980E9F23365326005F24EB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5C357D0899E2F115CF860B24 /* Pods-Face GestureUITests.release.xcconfig */;
+			baseConfigurationReference = E972ECD591AD9D422FAF506C /* Pods-Face GestureUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

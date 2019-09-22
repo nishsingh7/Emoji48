@@ -19,7 +19,7 @@ class EmojiBuilder: SCNNode {
     private let sphereGeometry: SCNGeometry
 
     init(type: Expression) {
-        self.frames = GifHelper.toImages(gifNamed: type.rawValue)!
+        self.frames = GifHelper.toImages(gifNamed: type.rawValue, withBackground: EMOJI_YELLOW)!
         self.sphereGeometry = SCNSphere.init(radius: EMOJI_SPHERE_RADIUS)
         super.init()
         self.create()
@@ -56,7 +56,7 @@ class EmojiBuilder: SCNNode {
 }
 
 class GifHelper {
-    class func toImages(gifNamed: String) -> [UIImage]? {
+    class func toImages(gifNamed: String, withBackground: UIColor? = nil) -> [UIImage]? {
 
         guard let bundleURL = Bundle.main
             .url(forResource: gifNamed, withExtension: "gif") else {
@@ -86,7 +86,8 @@ class GifHelper {
         for index in 0 ..< framesCount {
 
             if let cgImageRef = CGImageSourceCreateImageAtIndex(imageSource, index, nil) {
-                let uiImageRef = UIImage(cgImage: cgImageRef).withBackground(color:  #colorLiteral(red: 0.9986166358, green: 0.7901780605, blue: 0.1795150936, alpha: 1))!
+                  
+                let uiImageRef = withBackground != nil ? UIImage(cgImage: cgImageRef).withBackground(color:  withBackground!)! : UIImage(cgImage: cgImageRef)
                 frameList.append(uiImageRef)
             }
 
