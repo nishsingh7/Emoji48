@@ -12,14 +12,14 @@ import SceneKit
 
 class MasterVC: UIViewController {
 
-
     // Injection parameters
-    let expressions: [Expression] = [.crazy, .money, .wink]
+    let expressions: [Expression] = [.crazy, .money, .wink, .scream]
     let song: Song = .knightrider
     let difficult: Difficulty = .easy
 
     // Components
-    @IBOutlet var gameScene: GameScene?
+    @IBOutlet weak var sceneView: SCNView!
+    var gameScene: GameScene?
     
     private lazy var classifier: Classifier = {
         let object = Classifier(parent: self)
@@ -29,13 +29,19 @@ class MasterVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        sceneView.allowsCameraControl = true
+        
         let script: SongScript = Butler.generateSongScript(forSong: .knightrider, difficulty: .easy)!
-        self.gameScene = GameScene(expressions: [], script: script, delegate: self)
+        self.gameScene = GameScene(expressions: expressions, script: script, delegate: self)
+        
+        sceneView.scene = self.gameScene
+        
         classifier.huntForExpression(expressions)
     }
     
     private func detectedExpression(_ expressions: [Expression]) {
-        
+        gameScene?.updatedExpression(expressions)
     }
 }
 

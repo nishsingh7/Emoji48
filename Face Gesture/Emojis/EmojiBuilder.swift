@@ -13,7 +13,7 @@ import SpriteKit
 class EmojiBuilder: SCNNode {
     
     private let EMOJI_YELLOW =   #colorLiteral(red: 0.9986166358, green: 0.7901780605, blue: 0.1795150936, alpha: 1)
-    private let EMOJI_SPHERE_RADIUS = CGFloat(2)
+    private let EMOJI_SPHERE_RADIUS = CGFloat(0.035)
     
     private let frames: [UIImage]
     private let sphereGeometry: SCNGeometry
