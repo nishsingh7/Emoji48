@@ -15,7 +15,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, UITableViewDelegate, 
     @IBOutlet var sceneView: ARSCNView!
     @IBOutlet weak var tableView: UITableView!
     
-    let metrics = ["eyeLookUpLeft", "eyeLookUpRight", "eyeLookInLeft", "eyeLookOutLeft", "eyeLookInRight", "eyeLookOutRight", "eyeWideLeft", "eyeWideRight", "eyeSquintLeft", "eyeSquintRight", "eyeBlinkLeft", "eyeBlinkRight", "mouthSmileLeft", "mouthSmileRight", "mouthFunnel", "mouthPucker", "mouthClose", "tongueOut"]
+    let metrics = ["eyeLookUpLeft", "eyeLookUpRight", "eyeLookInLeft", "eyeLookOutLeft", "eyeLookInRight", "eyeLookOutRight", "eyeWideLeft", "eyeWideRight", "eyeSquintLeft", "eyeSquintRight", "eyeBlinkLeft", "eyeBlinkRight", "mouthSmileLeft", "mouthSmileRight", "mouthFunnel", "mouthPucker", "mouthClose", "tongueOut", "browOuterUpLeft", "browOuterUpRight", "browInnerUp"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -103,7 +103,13 @@ class ViewController: UIViewController, ARSCNViewDelegate, UITableViewDelegate, 
         let mouthClose = anchor.blendShapes[.mouthClose]?.floatValue ?? 0.0
         let tongueOut = anchor.blendShapes[.tongueOut]?.floatValue ?? 0.0
         
-        let array = [eyeLookUpLeft, eyeLookUpRight, eyeLookInLeft, eyeLookOutLeft, eyeLookInRight, eyeLookOutRight, eyeWideLeft, eyeWideRight, eyeSquintLeft, eyeSquintRight, eyeBlinkLeft, eyeBlinkRight, mouthSmileLeft, mouthSmileRight, mouthFunnel, mouthPucker, mouthClose, tongueOut]
+        let browOuterUpLeft = anchor.blendShapes[.browOuterUpLeft]?.floatValue ?? 0.0
+        let browOuterUpRight = anchor.blendShapes[.browOuterUpRight]?.floatValue ?? 0.0
+        let browInnerUp = anchor.blendShapes[.browInnerUp]?.floatValue ?? 0.0
+        
+        
+        
+        let array = [eyeLookUpLeft, eyeLookUpRight, eyeLookInLeft, eyeLookOutLeft, eyeLookInRight, eyeLookOutRight, eyeWideLeft, eyeWideRight, eyeSquintLeft, eyeSquintRight, eyeBlinkLeft, eyeBlinkRight, mouthSmileLeft, mouthSmileRight, mouthFunnel, mouthPucker, mouthClose, tongueOut, browOuterUpLeft, browOuterUpRight, browInnerUp]
         
         updatedMetrics(array)
     }
