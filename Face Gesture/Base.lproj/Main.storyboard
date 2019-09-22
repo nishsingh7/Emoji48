@@ -244,11 +244,20 @@
                         <outlet property="percentageLabel" destination="ReK-Ln-03j" id="clV-TT-mxd"/>
                         <outlet property="sceneView" destination="Yio-P3-IaD" id="e8C-a5-Peq"/>
                         <outlet property="scoreLabel" destination="gJa-BQ-nne" id="nvc-4S-msa"/>
+                        <segue destination="TDv-ji-Dxd" kind="show" identifier="finish" id="FHy-CV-Qu9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dhm-th-Oxb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="969.56521739130437" y="744.64285714285711"/>
+        </scene>
+        <!--FinalStoryboard-->
+        <scene sceneID="nRB-66-KF5">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FinalStoryboard" id="TDv-ji-Dxd" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bms-uv-l39" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1615" y="715"/>
         </scene>
         <!--Test View Controller-->
         <scene sceneID="sDQ-9y-Mov">

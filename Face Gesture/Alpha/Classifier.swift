@@ -38,6 +38,8 @@ class Classifier: UIView, ARSCNViewDelegate {
         sceneView = ARSCNView(frame: bounds)
         sceneView.delegate = self
         
+        sceneView.session.delegate = self
+        
         addSubview(sceneView)
         
         let configuration = ARFaceTrackingConfiguration()

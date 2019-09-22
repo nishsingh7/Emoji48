@@ -63,6 +63,11 @@ class FinalViewController: UIViewController, UITableViewDataSource, UITableViewD
         userPlayerLayer.frame = self.videoView.layer.bounds
         self.videoView.backgroundColor = UIColor.clear;
         self.videoView.layer.insertSublayer(userPlayerLayer, at: 0)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(playerItemDidReachEnd(notification:)),
+                                               name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
+                                               object: userPlayer.currentItem)
     }
     
     // View Functions

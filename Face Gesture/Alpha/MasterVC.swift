@@ -25,6 +25,8 @@ class MasterVC: UIViewController {
     var emotionOverlayView: UIView? = nil
     
     var gameScene: GameScene?
+    
+    var videoURL: URL? = nil
 
     
     var backgroundPlayer: AVPlayer!
@@ -62,9 +64,11 @@ class MasterVC: UIViewController {
         classifier.huntForExpression(expressions)
         
         AudioPlayer.shared.playSong(song)
+//        appRecorder.start()
+        cameraRecorder.start()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 50) {
-            self.performSegue(withIdentifier: "finishSession", sender: self)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 54) {
+            self.stopRecording()
         }
     }
     
@@ -114,39 +118,53 @@ class MasterVC: UIViewController {
         gameScene?.updatedExpression(expressions)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let final = segue.destination as? FinalViewController {
+            final.score = String(points)
+            final.url = self.videoURL!
+        }
+    }
+    
     func stopRecording() {
-        let taskGroup = DispatchGroup()
-        var appUrlRaw: URL? = nil
-        var cameraUrlRaw: URL? = nil
-        taskGroup.enter()
-        self.appRecorder.stop(completionHandler: { url in
-            appUrlRaw = url
-            taskGroup.leave()
-        })
-        taskGroup.enter()
+//        let taskGroup = DispatchGroup()
+//        var appUrlRaw: URL? = nil
+//        var cameraUrlRaw: URL? = nil
+//        taskGroup.enter()
+//
+//        self.appRecorder.stop(completionHandler: { url in
+//            appUrlRaw = url
+//            taskGroup.leave()
+//        })
+//        taskGroup.enter()
+        
         self.cameraRecorder.stop(completionHandler: { (url) in
-            cameraUrlRaw = url
-            taskGroup.leave()
+//            cameraUrlRaw = url
+            self.videoURL = url
+            self.performSegue(withIdentifier: "finish", sender: self)
+//            taskGroup.leave()
+            
+            
         })
         
-        taskGroup.wait()
-        
-        taskGroup.notify(queue: .main, execute: {
-            guard let appUrl = appUrlRaw, let cameraUrl = cameraUrlRaw else {
-                print("Urls aren't set")
-                return
-            }
-            ShareVideoRenderer.merge(appVideoURL: appUrl, cameraVideoURL: cameraUrl, completionHandler: { (urlRaw, error) in
-                guard let url = urlRaw else {
-                    print("No merge URL")
-                    return
-                }
-                print(url)
-                print("Finished")
-                
-            })
-        })
-        
+//        taskGroup.wait()
+//
+//        taskGroup.notify(queue: .main, execute: {
+//            guard let appUrl = appUrlRaw, let cameraUrl = cameraUrlRaw else {
+//                print("Urls aren't set")
+//                return
+//            }
+//            ShareVideoRenderer.merge(appVideoURL: appUrl, cameraVideoURL: cameraUrl, completionHandler: { (urlRaw, error) in
+//                guard let url = urlRaw else {
+//                    print("No merge URL")
+//                    return
+//                }
+//                print(url)
+//
+//                print("Finished")
+//
+//            })
+//        })
+
     }
     
 }
