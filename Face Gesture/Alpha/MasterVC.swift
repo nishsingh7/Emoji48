@@ -13,7 +13,7 @@ import SceneKit
 class MasterVC: UIViewController {
 
     // Injection parameters
-    let expressions: [Expression] = [.crazy, .money, .wink, .kiss]
+    let expressions: [Expression] = [.sleepy, .eyeroll, .happy, .surprised]
     let song: Song = .knightrider
     let difficult: Difficulty = .easy
 
@@ -24,9 +24,6 @@ class MasterVC: UIViewController {
     @IBOutlet weak var closeButton: UIButton!
     
     var gameScene: GameScene?
-    
-//    var coinClassification: [CoinScoreClassification]
-    
     
     private lazy var classifier: Classifier = {
         let object = Classifier(parent: self)
@@ -39,9 +36,13 @@ class MasterVC: UIViewController {
         self.setUpUI()
         let script: SongScript = Butler.generateSongScript(forSong: .knightrider, difficulty: .easy)!
         self.gameScene = GameScene(expressions: expressions, script: script, delegate: self)
+        sceneView.backgroundColor = UIColor.clear
         sceneView.scene = gameScene
-        sceneView.allowsCameraControl = true
+        sceneView.allowsCameraControl = false
         classifier.huntForExpression(expressions)
+        
+        
+        
     }
     
     private func setUpUI() {
@@ -60,7 +61,7 @@ class MasterVC: UIViewController {
 
 extension MasterVC : GameSceneDelegate {
     func didClassifyCoin(laneIndex: Int, classification: CoinScoreClassification) {
-        print("Coin Classified")
+        print("LANE \(laneIndex + 1) - \(classification.rawValue)")
 //        coinClassificationp[laneIndex]
     }
 }

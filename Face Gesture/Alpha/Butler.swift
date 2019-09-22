@@ -20,9 +20,9 @@ class Butler {
     
     class func generateSongScript(forSong song: Song, difficulty: Difficulty) -> SongScript? {
         guard let prompts = getPrompts(forSong: song, difficulty: difficulty) else { return nil }
-        var laneOffsets: [[Float]] = Array(repeating: [], count: difficulty.numberOfLanes)
+        var laneOffsets: [[Int]] = Array(repeating: [], count: difficulty.numberOfLanes)
         for prompt in prompts {
-            laneOffsets[prompt.lane].append(Float(Int(prompt.offset / 100)) / 10)
+            laneOffsets[prompt.lane].append(Int(prompt.offset / 100))
         }
         
         for i in 0 ... laneOffsets.count - 1 {
@@ -47,6 +47,8 @@ enum Expression: String, CaseIterable {
     case winkAndTongue  // wink + tongue
     case kiss       // pout (+ wink)
     case happy      // smiling
+    case sleepy     // eyesClosed
+    case surprised  // surprised
     
     var image: UIImage? { return UIImage(named: rawValue) }
 }
@@ -67,4 +69,10 @@ enum Difficulty: String, CaseIterable {
         case .hard: return 4
         }
     }
+}
+
+struct StyleSheet {
+    static let positiveLaneColour = #colorLiteral(red: 0, green: 1, blue: 0, alpha: 1)
+    static let defaultLaneColour = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+    static let coinColour = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
 }

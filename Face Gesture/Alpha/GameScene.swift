@@ -9,6 +9,8 @@
 import UIKit
 import SceneKit
 
+let coinTravelTime: Double = 4.0
+
 class GameScene: SCNScene {
     
     let expressions: [Expression]
@@ -25,6 +27,10 @@ class GameScene: SCNScene {
         super.init()
         
         setupScene()
+        
+        for lane in lanes {
+            lane.play()
+        }
     }
     
     public func updatedExpression(_ currentExpressions: [Expression]) {
@@ -42,6 +48,7 @@ class GameScene: SCNScene {
     }
     
     private func setupScene() {
+        
         setupLighting()
         setupObjects()
         setupCamera()
@@ -50,6 +57,7 @@ class GameScene: SCNScene {
     private func setupLighting() {
         let light = SCNLight()
         light.type = .omni
+        light.intensity = 1000
         let lightNode = SCNNode()
         lightNode.light = light
         lightNode.position = SCNVector3(-2, 1, 0)
@@ -65,8 +73,8 @@ class GameScene: SCNScene {
         
         let sphere = SCNSphere(radius: 0.03)
         sphere.firstMaterial?.diffuse.contents = UIColor.yellow
-        let targetNode1 = SCNNode(geometry: sphere)
-        let targetNode2 = SCNNode(geometry: sphere)
+        let targetNode1 = SCNNode()
+        let targetNode2 = SCNNode()
         
         let laneMidPoint = 0.5 * (lanes.first!.position.z + lanes.last!.position.z)
         targetNode1.position = SCNVector3(0, 0, laneMidPoint)
@@ -90,10 +98,11 @@ class GameScene: SCNScene {
     }
     
     private func setupFloor() {
-        let floor = SCNFloor()
-        floor.firstMaterial?.diffuse.contents = UIColor.lightGray
-        let floorNode = SCNNode(geometry: floor)
-        rootNode.addChildNode(floorNode)
+//        let floor = SCNFloor()
+//        floor.firstMaterial?.diffuse.contents = UIColor.yellow
+//        floor.reflectivity = 0.0
+//        let floorNode = SCNNode(geometry: floor)
+//        rootNode.addChildNode(floorNode)
     }
     
     private func setupLanes(forScript script: SongScript) {

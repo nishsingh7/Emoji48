@@ -30,12 +30,13 @@
 		825BF44823377F2C0040D9F0 /* wink.gif in Resources */ = {isa = PBXBuildFile; fileRef = 825BF43C23377F2C0040D9F0 /* wink.gif */; };
 		825BF44923377F2C0040D9F0 /* happy.gif in Resources */ = {isa = PBXBuildFile; fileRef = 825BF43D23377F2C0040D9F0 /* happy.gif */; };
 		825BF44A23377F2C0040D9F0 /* crazy.gif in Resources */ = {isa = PBXBuildFile; fileRef = 825BF43E23377F2C0040D9F0 /* crazy.gif */; };
-		825BF44B23377F2C0040D9F0 /* suprised.gif in Resources */ = {isa = PBXBuildFile; fileRef = 825BF43F23377F2C0040D9F0 /* suprised.gif */; };
+		825BF44B23377F2C0040D9F0 /* surprised.gif in Resources */ = {isa = PBXBuildFile; fileRef = 825BF43F23377F2C0040D9F0 /* surprised.gif */; };
 		825BF44C23377F2C0040D9F0 /* heart.gif in Resources */ = {isa = PBXBuildFile; fileRef = 825BF44023377F2C0040D9F0 /* heart.gif */; };
 		825BF44D23377F2C0040D9F0 /* smirk.gif in Resources */ = {isa = PBXBuildFile; fileRef = 825BF44123377F2C0040D9F0 /* smirk.gif */; };
 		825BF44E23377F2C0040D9F0 /* silly.gif in Resources */ = {isa = PBXBuildFile; fileRef = 825BF44223377F2C0040D9F0 /* silly.gif */; };
 		825BF45023377F380040D9F0 /* EmojiBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825BF44F23377F380040D9F0 /* EmojiBuilder.swift */; };
 		825BF45223377F3F0040D9F0 /* EmojiSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825BF45123377F3F0040D9F0 /* EmojiSceneViewController.swift */; };
+		825BF4542337CD6A0040D9F0 /* Screenshot 2019-09-22 at 16.38.28.png in Resources */ = {isa = PBXBuildFile; fileRef = 825BF4532337CD6A0040D9F0 /* Screenshot 2019-09-22 at 16.38.28.png */; };
 		82980E7123365324005F24EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82980E7023365324005F24EB /* AppDelegate.swift */; };
 		82980E7523365324005F24EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82980E7423365324005F24EB /* ViewController.swift */; };
 		82980E7823365324005F24EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82980E7623365324005F24EB /* Main.storyboard */; };
@@ -96,12 +97,13 @@
 		825BF43C23377F2C0040D9F0 /* wink.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = wink.gif; sourceTree = "<group>"; };
 		825BF43D23377F2C0040D9F0 /* happy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = happy.gif; sourceTree = "<group>"; };
 		825BF43E23377F2C0040D9F0 /* crazy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = crazy.gif; sourceTree = "<group>"; };
-		825BF43F23377F2C0040D9F0 /* suprised.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = suprised.gif; sourceTree = "<group>"; };
+		825BF43F23377F2C0040D9F0 /* surprised.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = surprised.gif; sourceTree = "<group>"; };
 		825BF44023377F2C0040D9F0 /* heart.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = heart.gif; sourceTree = "<group>"; };
 		825BF44123377F2C0040D9F0 /* smirk.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = smirk.gif; sourceTree = "<group>"; };
 		825BF44223377F2C0040D9F0 /* silly.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = silly.gif; sourceTree = "<group>"; };
 		825BF44F23377F380040D9F0 /* EmojiBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiBuilder.swift; sourceTree = "<group>"; };
 		825BF45123377F3F0040D9F0 /* EmojiSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiSceneViewController.swift; sourceTree = "<group>"; };
+		825BF4532337CD6A0040D9F0 /* Screenshot 2019-09-22 at 16.38.28.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot 2019-09-22 at 16.38.28.png"; sourceTree = "<group>"; };
 		82980E6D23365324005F24EB /* Face Gesture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Face Gesture.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82980E7023365324005F24EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82980E7423365324005F24EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				82980E7B23365326005F24EB /* LaunchScreen.storyboard */,
 				82980E7E23365326005F24EB /* Info.plist */,
 				82980EAC2336A294005F24EB /* Assets.xcassets */,
+				825BF4532337CD6A0040D9F0 /* Screenshot 2019-09-22 at 16.38.28.png */,
 				825639C82336CE7E005462DF /* knightrider-easy.json */,
 				82980EA723367CB9005F24EB /* Potential trash */,
 			);
@@ -305,7 +308,7 @@
 				825BF44223377F2C0040D9F0 /* silly.gif */,
 				825BF43723377F2B0040D9F0 /* sleepy.gif */,
 				825BF44123377F2C0040D9F0 /* smirk.gif */,
-				825BF43F23377F2C0040D9F0 /* suprised.gif */,
+				825BF43F23377F2C0040D9F0 /* surprised.gif */,
 				825BF43C23377F2C0040D9F0 /* wink.gif */,
 			);
 			path = Gifs;
@@ -430,10 +433,11 @@
 				825BF44323377F2C0040D9F0 /* sleepy.gif in Resources */,
 				825BF44623377F2C0040D9F0 /* scream.gif in Resources */,
 				82980E7D23365326005F24EB /* LaunchScreen.storyboard in Resources */,
+				825BF4542337CD6A0040D9F0 /* Screenshot 2019-09-22 at 16.38.28.png in Resources */,
 				82980EAD2336A294005F24EB /* Assets.xcassets in Resources */,
 				825BF44D23377F2C0040D9F0 /* smirk.gif in Resources */,
 				825BF44923377F2C0040D9F0 /* happy.gif in Resources */,
-				825BF44B23377F2C0040D9F0 /* suprised.gif in Resources */,
+				825BF44B23377F2C0040D9F0 /* surprised.gif in Resources */,
 				7A6A43AD23379BF100EE036B /* FinalStoryboard.storyboard in Resources */,
 				825BF44523377F2C0040D9F0 /* money.gif in Resources */,
 				825BF44A23377F2C0040D9F0 /* crazy.gif in Resources */,
