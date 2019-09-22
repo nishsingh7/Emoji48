@@ -13,9 +13,9 @@ import SceneKit
 class MasterVC: UIViewController {
 
     // Injection parameters
-    let expressions: [Expression] = [.sleepy, .eyeroll, .happy]
+    let expressions: [Expression] = [.sleepy, .money, .surprised, .happy]
     let song: Song = .easySong
-    let difficulty: Difficulty = .medium
+    let difficulty: Difficulty = .hard
 
     // Components
     @IBOutlet weak var sceneView: SCNView!
