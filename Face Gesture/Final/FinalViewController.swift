@@ -30,23 +30,39 @@ class FinalViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var nameInput: UITextField!
     var backgroundPlayer: AVPlayer!
     var backgroundPlayerLayer: AVPlayerLayer!
+    var userPlayer: AVPlayer!
+    var userPlayerLayer: AVPlayerLayer!
     var leaderboardList: [LeaderboardItem] = []
-
-
     
+    
+    var score: String!
+    var url: URL!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.fetchData()
         setupBackgroundVideo()
+        scoreLabel.text = score
+        setupUserVideo(self.url)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         backgroundPlayer.play()
+        userPlayer.play()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         backgroundPlayer.pause()
+    }
+    func setupUserVideo(_ url: URL) {
+        userPlayer = AVPlayer(url: url)
+        userPlayerLayer = AVPlayerLayer(player: userPlayer)
+        userPlayerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
+        userPlayer.actionAtItemEnd = AVPlayer.ActionAtItemEnd.none
+        userPlayerLayer.frame = self.videoView.layer.bounds
+        self.videoView.backgroundColor = UIColor.clear;
+        self.videoView.layer.insertSublayer(userPlayerLayer, at: 0)
     }
     
     // View Functions

@@ -25,6 +25,7 @@ class MasterVC: UIViewController {
     var emotionOverlayView: UIView? = nil
     
     var gameScene: GameScene?
+
     
     var backgroundPlayer: AVPlayer!
     var backgroundPlayerLayer: AVPlayerLayer!
@@ -34,9 +35,17 @@ class MasterVC: UIViewController {
     var streakCount = 0
     var points = 0
     
+    var appRecorder = AppRecorder()
+    var cameraRecorder = CameraRecorder()
+    
     private lazy var classifier: Classifier = {
         let object = Classifier(parent: self)
         object.detectedExpressionsHandler = { [weak self] expressions in self?.detectedExpression(expressions) }
+        object.newFrame = { frame in
+            if (self.cameraRecorder.isRecording) {
+                self.cameraRecorder.appendBuffer(frame.capturedImage, atTime: frame.timestamp)
+            }
+        }
         return object
     }()
 
@@ -105,11 +114,41 @@ class MasterVC: UIViewController {
         gameScene?.updatedExpression(expressions)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let final = segue.destination as? FinalViewController {
-            
-        }
+    func stopRecording() {
+        let taskGroup = DispatchGroup()
+        var appUrlRaw: URL? = nil
+        var cameraUrlRaw: URL? = nil
+        taskGroup.enter()
+        self.appRecorder.stop(completionHandler: { url in
+            appUrlRaw = url
+            taskGroup.leave()
+        })
+        taskGroup.enter()
+        self.cameraRecorder.stop(completionHandler: { (url) in
+            cameraUrlRaw = url
+            taskGroup.leave()
+        })
+        
+        taskGroup.wait()
+        
+        taskGroup.notify(queue: .main, execute: {
+            guard let appUrl = appUrlRaw, let cameraUrl = cameraUrlRaw else {
+                print("Urls aren't set")
+                return
+            }
+            ShareVideoRenderer.merge(appVideoURL: appUrl, cameraVideoURL: cameraUrl, completionHandler: { (urlRaw, error) in
+                guard let url = urlRaw else {
+                    print("No merge URL")
+                    return
+                }
+                print(url)
+                print("Finished")
+                
+            })
+        })
+        
     }
+    
 }
 
 extension MasterVC : GameSceneDelegate {
