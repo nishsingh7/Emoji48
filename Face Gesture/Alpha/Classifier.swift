@@ -111,6 +111,8 @@ class Classifier: UIView, ARSCNViewDelegate {
             case .winkAndTongue: return ((isWinking() || eyesAreClosed()) && tongueIsOut())
             case .kiss: return ((isPouting() || mouthIsOpen()) && (isWinking() || eyesAreClosed()))
             case .happy: return (isSmiling())
+            case .sleepy: return (eyesAreClosed())
+            case .surprised: return (eyebrowsAreRaised())
             }
         }
         

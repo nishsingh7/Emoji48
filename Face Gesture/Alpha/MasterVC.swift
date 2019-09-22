@@ -13,7 +13,7 @@ import SceneKit
 class MasterVC: UIViewController {
 
     // Injection parameters
-    let expressions: [Expression] = [.crazy, .money, .wink, .kiss]
+    let expressions: [Expression] = [.sleepy, .eyeroll, .happy, .surprised]
     let song: Song = .knightrider
     let difficult: Difficulty = .easy
 
@@ -41,17 +41,16 @@ class MasterVC: UIViewController {
         super.viewDidLoad()
         self.setUpUI()
         classifier.huntForExpression(expressions)
-
-        self.showPopup(emotion: .fire)
-        
     }
     
     private func setUpUI() {
         // Scene View
         let script: SongScript = Butler.generateSongScript(forSong: .knightrider, difficulty: .easy)!
         self.gameScene = GameScene(expressions: expressions, script: script, delegate: self)
+        activeClassifications = Array(repeating: [], count: script.laneScripts.count)
         sceneView.scene = gameScene
-        sceneView.allowsCameraControl = true
+        sceneView.backgroundColor = UIColor.clear
+        sceneView.allowsCameraControl = false
         
         // Score Label
         scoreLabel.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
@@ -75,16 +74,19 @@ extension MasterVC : GameSceneDelegate {
                 self.activeClassifications[laneIndex] = []
                 self.streakCount = 0
                 self.points -= 5
+                self.updateScoreLabel()
                 return
             case .hit:
                 self.activeClassifications[laneIndex].append(classification)
                 self.streakCount += 1
                 self.points += 5
+                self.updateScoreLabel()
                 break;
             case .perfect:
                 self.activeClassifications[laneIndex].append(classification)
                 self.streakCount += 1
                 self.points += 10
+                self.updateScoreLabel()
                 break;
         }
         
@@ -98,33 +100,39 @@ extension MasterVC : GameSceneDelegate {
         }
         
         // Streak Actions
-        if self.activeClassifications[laneIndex].count > 3 {
+        if streakCount == 20 {
+            self.gameScene?.blowConfetti()
+        }
+        
+        if streakCount == 10 {
             self.showPopup(emotion: .thumbsUp)
         }
         
-        if streakCount > 5 {
-            self.showPopup(emotion: .fire)
-        }
-                
-        if streakCount > 10 {
+        if streakCount == 6 {
             self.showPopup(emotion: .confetti)
         }
         
-        if streakCount > 20 {
-            self.gameScene?.blowConfetti()
+        if self.activeClassifications[laneIndex].count == 3 {
+            self.showPopup(emotion: .fire)
+        }
+    }
+    
+    func updateScoreLabel() {
+        DispatchQueue.main.async {
+            self.scoreLabel.text = String(self.points)
         }
     }
     
     func showPopup(emotion: Emotion) {
         if emotionOverlayView == nil {
-            self.emotionOverlayView = EmotionOverlayView(emotion: .thumbsUp)
+            self.emotionOverlayView = EmotionOverlayView(emotion: emotion)
             self.emotionOverlayView?.center = self.view.center
             self.emotionOverlayView!.alpha = 0
             self.view.addSubview(self.emotionOverlayView!)
             UIView.animate(withDuration: 0.5, delay: 0.5, options: .curveEaseOut, animations: {
                 self.emotionOverlayView!.alpha = 1.0
             })
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 UIView.animate(withDuration: 0.5, delay: 0.5, options: .curveEaseOut, animations: {
                     self.emotionOverlayView!.alpha = 0.0
                 },completion: { (finished: Bool) in

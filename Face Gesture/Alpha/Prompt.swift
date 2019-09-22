@@ -18,5 +18,5 @@ struct SongScript {
 }
 
 struct LaneScript {
-    let offsets: [Float]
+    let offsets: [Int]
 }

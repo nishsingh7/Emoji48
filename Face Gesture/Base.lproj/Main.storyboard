@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,7 +29,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8My-q8-mTf" id="wN4-3b-4mg">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="rn5-Fx-qgS">
@@ -168,7 +168,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yio-P3-IaD">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screenshot 2019-09-22 at 16.38.28.png" translatesAutoresizingMaskIntoConstraints="NO" id="LqH-Q6-cYb">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yio-P3-IaD">
                                 <rect key="frame" x="0.0" y="144" width="414" height="752"/>
                             </sceneKitView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6IK-zN-bPh">
@@ -176,7 +179,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="5000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJa-BQ-nne">
                                         <rect key="frame" x="114.5" y="0.0" width="185" height="50"/>
-                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="185" id="8B0-1h-zUb"/>
                                             <constraint firstAttribute="height" constant="50" id="lQj-ke-UHy"/>
@@ -225,13 +228,21 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6IK-zN-bPh" firstAttribute="trailing" secondItem="yth-TG-Se5" secondAttribute="trailing" id="4hg-VJ-siy"/>
+                            <constraint firstItem="LqH-Q6-cYb" firstAttribute="top" secondItem="Ke0-TZ-Tea" secondAttribute="top" id="6bB-uq-sWn"/>
+                            <constraint firstItem="Yio-P3-IaD" firstAttribute="top" secondItem="BgG-7X-WXE" secondAttribute="bottom" constant="27" id="7km-hB-GJY"/>
                             <constraint firstAttribute="bottom" secondItem="Yio-P3-IaD" secondAttribute="bottom" id="CUG-oC-Qts"/>
                             <constraint firstItem="6IK-zN-bPh" firstAttribute="leading" secondItem="yth-TG-Se5" secondAttribute="leading" id="DmT-FU-JUa"/>
+                            <constraint firstAttribute="bottom" secondItem="Yio-P3-IaD" secondAttribute="bottom" id="Fst-Yz-a0J"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BgG-7X-WXE" secondAttribute="trailing" constant="12" id="Il9-qm-IKm"/>
                             <constraint firstItem="BgG-7X-WXE" firstAttribute="leading" secondItem="Ke0-TZ-Tea" secondAttribute="leadingMargin" constant="13" id="O79-NF-S5V"/>
                             <constraint firstItem="BgG-7X-WXE" firstAttribute="top" secondItem="6IK-zN-bPh" secondAttribute="bottom" constant="24" id="RHv-AT-UhP"/>
+                            <constraint firstAttribute="bottom" secondItem="LqH-Q6-cYb" secondAttribute="bottom" id="SvC-AS-pia"/>
                             <constraint firstItem="Yio-P3-IaD" firstAttribute="top" secondItem="6IK-zN-bPh" secondAttribute="bottom" constant="53" id="VnZ-bh-4tj"/>
+                            <constraint firstItem="LqH-Q6-cYb" firstAttribute="leading" secondItem="yth-TG-Se5" secondAttribute="leading" id="aOw-ud-Abt"/>
+                            <constraint firstItem="Yio-P3-IaD" firstAttribute="leading" secondItem="yth-TG-Se5" secondAttribute="leading" id="d7s-2N-shC"/>
+                            <constraint firstItem="Yio-P3-IaD" firstAttribute="trailing" secondItem="yth-TG-Se5" secondAttribute="trailing" id="jgI-rq-lHb"/>
                             <constraint firstItem="6IK-zN-bPh" firstAttribute="top" secondItem="Ke0-TZ-Tea" secondAttribute="top" constant="41" id="sac-lT-iAU"/>
+                            <constraint firstAttribute="trailing" secondItem="LqH-Q6-cYb" secondAttribute="trailing" id="zqd-dj-ozE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yth-TG-Se5"/>
                     </view>
@@ -277,6 +288,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Screenshot 2019-09-22 at 16.38.28.png" width="706" height="496"/>
         <image name="close" width="48" height="48"/>
     </resources>
 </document>
