@@ -18,6 +18,8 @@ class Classifier: UIView, ARSCNViewDelegate {
     
     var expressionList: [Expression] = []
     
+    var newFrame: ((ARFrame) -> Void)? = nil
+    
     var detectedExpressionsHandler: (([Expression]) -> Void)? = nil
     
     public func huntForExpression(_ expressions: [Expression]) {
@@ -133,8 +135,10 @@ class Classifier: UIView, ARSCNViewDelegate {
 }
 
 extension Classifier: ARSessionDelegate {
+    
+    
     func session(_ session: ARSession, didUpdate frame: ARFrame) {
-        let _ = frame.capturedImage
         //TODO: DO SOMETHING WITH THIS FRAME
+        self.newFrame?(frame)
     }
 }
