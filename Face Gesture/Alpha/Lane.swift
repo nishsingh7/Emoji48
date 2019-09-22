@@ -55,7 +55,7 @@ class Lane: SCNNode {
     }
     
     private func generateDisc() {
-        let
+//        let
     }
 }
 

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "6DF0485E-9001-4F79-92B4-F1FBD8577501"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2F0A373B-F2CA-472E-B5EB-E06278523FA4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Face Gesture/Alpha/MasterVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "MasterVC"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "2F0A373B-F2CA-472E-B5EB-E06278523FA4 - 58b584f765867fba"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Face_Gesture.MasterVC.scoreLabel.getter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "Face Gesture"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mikecooper/Documents/Coding/48HourProduct/Playground/Emoji48/Face%20Gesture/Alpha/MasterVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "132">
+               </Location>
+               <Location
+                  uuid = "2F0A373B-F2CA-472E-B5EB-E06278523FA4 - e027826779685a26"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Face_Gesture.MasterVC.scoreLabel.setter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "Face Gesture"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mikecooper/Documents/Coding/48HourProduct/Playground/Emoji48/Face%20Gesture/Alpha/MasterVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "188">
+               </Location>
+               <Location
+                  uuid = "2F0A373B-F2CA-472E-B5EB-E06278523FA4 - 38480055810fe4d7"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Face_Gesture.MasterVC.scoreLabel.modify : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "Face Gesture"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mikecooper/Documents/Coding/48HourProduct/Playground/Emoji48/Face%20Gesture/Alpha/MasterVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  uuid = "2F0A373B-F2CA-472E-B5EB-E06278523FA4 - c8c84b962346a6bb"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Face_Gesture.MasterVC.scoreLabel.modify : Swift.Optional&lt;__C.UILabel&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Face Gesture"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mikecooper/Documents/Coding/48HourProduct/Playground/Emoji48/Face%20Gesture/Alpha/MasterVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "2F0A373B-F2CA-472E-B5EB-E06278523FA4 - 8be14e6d448736b0"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Face_Gesture.MasterVC.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Face_Gesture.MasterVC"
+                  moduleName = "Face Gesture"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mikecooper/Documents/Coding/48HourProduct/Playground/Emoji48/Face%20Gesture/Alpha/MasterVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "360">
+               </Location>
+               <Location
+                  uuid = "2F0A373B-F2CA-472E-B5EB-E06278523FA4 - 6da9c17a250b46c4"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Face_Gesture.MasterVC.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Face_Gesture.MasterVC&gt;"
+                  moduleName = "Face Gesture"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mikecooper/Documents/Coding/48HourProduct/Playground/Emoji48/Face%20Gesture/Alpha/MasterVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "308">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6216FE06-E0C2-4691-A5F6-84ECD182619E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Face Gesture/Alpha/MasterVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "MasterVC"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "6216FE06-E0C2-4691-A5F6-84ECD182619E - 91f79a834c342486"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Face_Gesture.MasterVC.gameScene.getter : Swift.Optional&lt;Face_Gesture.GameScene&gt;"
+                  moduleName = "Face Gesture"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mikecooper/Documents/Coding/48HourProduct/Playground/Emoji48/Face%20Gesture/Alpha/MasterVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "6216FE06-E0C2-4691-A5F6-84ECD182619E - a4d1b6a237880cb2"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Face_Gesture.MasterVC.gameScene.setter : Swift.Optional&lt;Face_Gesture.GameScene&gt;"
+                  moduleName = "Face Gesture"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mikecooper/Documents/Coding/48HourProduct/Playground/Emoji48/Face%20Gesture/Alpha/MasterVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "196">
+               </Location>
+               <Location
+                  uuid = "6216FE06-E0C2-4691-A5F6-84ECD182619E - ce1dbb0069cc2283"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Face_Gesture.MasterVC.gameScene.modify : Swift.Optional&lt;Face_Gesture.GameScene&gt;"
+                  moduleName = "Face Gesture"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mikecooper/Documents/Coding/48HourProduct/Playground/Emoji48/Face%20Gesture/Alpha/MasterVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "6216FE06-E0C2-4691-A5F6-84ECD182619E - 84fcf0a41b9e6488"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Face_Gesture.MasterVC.gameScene.modify : Swift.Optional&lt;Face_Gesture.GameScene&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Face Gesture"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mikecooper/Documents/Coding/48HourProduct/Playground/Emoji48/Face%20Gesture/Alpha/MasterVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "6216FE06-E0C2-4691-A5F6-84ECD182619E - 8be14e6d448736b0"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Face_Gesture.MasterVC.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Face_Gesture.MasterVC"
+                  moduleName = "Face Gesture"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mikecooper/Documents/Coding/48HourProduct/Playground/Emoji48/Face%20Gesture/Alpha/MasterVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "444">
+               </Location>
+               <Location
+                  uuid = "6216FE06-E0C2-4691-A5F6-84ECD182619E - 6da9c17a250b46c4"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Face_Gesture.MasterVC.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Face_Gesture.MasterVC&gt;"
+                  moduleName = "Face Gesture"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mikecooper/Documents/Coding/48HourProduct/Playground/Emoji48/Face%20Gesture/Alpha/MasterVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "392">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
