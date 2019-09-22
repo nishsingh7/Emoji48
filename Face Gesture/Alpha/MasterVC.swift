@@ -22,13 +22,14 @@ class MasterVC: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var percentageLabel: UILabel!
     @IBOutlet weak var closeButton: UIButton!
-    var emotionOverlayView: UIView?
+    var emotionOverlayView: UIView? = nil
     
     var gameScene: GameScene?
     
     // In-Play Score tracking
     var activeClassifications: [[CoinScoreClassification]] = []
     var streakCount = 0
+    var points = 0
     
     private lazy var classifier: Classifier = {
         let object = Classifier(parent: self)
@@ -41,8 +42,7 @@ class MasterVC: UIViewController {
         self.setUpUI()
         classifier.huntForExpression(expressions)
 
-        self.emotionOverlayView = EmotionOverlayView(emotion: .thumbsUp)
-        self.view.addSubview(self.emotionOverlayView!)
+        self.showPopup(emotion: .fire)
         
     }
     
@@ -60,6 +60,7 @@ class MasterVC: UIViewController {
         scoreLabel.layer.borderWidth = 3.0
         scoreLabel.layer.borderColor = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
         scoreLabel.layer.cornerRadius = 20
+        scoreLabel.text = String(self.points)
     }
     
     private func detectedExpression(_ expressions: [Expression]) {
@@ -69,18 +70,28 @@ class MasterVC: UIViewController {
 
 extension MasterVC : GameSceneDelegate {
     func didClassifyCoin(laneIndex: Int, classification: CoinScoreClassification) {
-        self.activeClassifications[laneIndex].append(classification)
-        
-        if classification == .missed {
-            // Reset active classification for lane
-            self.activeClassifications[laneIndex] = []
-            self.streakCount = 0
-            // CALL MISSED FUNCTION?
-            return
-        } else {
-            self.streakCount += 0
+        switch classification {
+            case .missed:
+                self.activeClassifications[laneIndex] = []
+                self.streakCount = 0
+                self.points -= 5
+                return
+            case .hit:
+                self.activeClassifications[laneIndex].append(classification)
+                self.streakCount += 1
+                self.points += 5
+                break;
+            case .perfect:
+                self.activeClassifications[laneIndex].append(classification)
+                self.streakCount += 1
+                self.points += 10
+                break;
         }
         
+        self.classifyCoinAction(laneIndex: laneIndex, classification: classification)
+    }
+    
+    func classifyCoinAction(laneIndex: Int, classification: CoinScoreClassification) {
         // Action
         if classification == .perfect {
             self.gameScene?.exciteEmoji(atIndex: laneIndex)
@@ -88,21 +99,40 @@ extension MasterVC : GameSceneDelegate {
         
         // Streak Actions
         if self.activeClassifications[laneIndex].count > 3 {
-//            self.gameScene?.exciteEmojiMORE(atIndex: laneIndex)
-            self.emotionOverlayView = EmotionOverlayView(emotion: .thumbsUp)
-            self.view.addSubview(self.emotionOverlayView!)
+            self.showPopup(emotion: .thumbsUp)
+        }
+        
+        if streakCount > 5 {
+            self.showPopup(emotion: .fire)
         }
                 
         if streakCount > 10 {
-            // 10 streak! Thumbs up overlay.
-            
+            self.showPopup(emotion: .confetti)
         }
         
         if streakCount > 20 {
-            // 20 streak!
             self.gameScene?.blowConfetti()
         }
-        
+    }
+    
+    func showPopup(emotion: Emotion) {
+        if emotionOverlayView == nil {
+            self.emotionOverlayView = EmotionOverlayView(emotion: .thumbsUp)
+            self.emotionOverlayView?.center = self.view.center
+            self.emotionOverlayView!.alpha = 0
+            self.view.addSubview(self.emotionOverlayView!)
+            UIView.animate(withDuration: 0.5, delay: 0.5, options: .curveEaseOut, animations: {
+                self.emotionOverlayView!.alpha = 1.0
+            })
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                UIView.animate(withDuration: 0.5, delay: 0.5, options: .curveEaseOut, animations: {
+                    self.emotionOverlayView!.alpha = 0.0
+                },completion: { (finished: Bool) in
+                    self.emotionOverlayView!.removeFromSuperview()
+                    self.emotionOverlayView = nil
+                })
+            }
+        }
     }
     
 }
