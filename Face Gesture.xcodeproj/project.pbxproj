@@ -16,6 +16,21 @@
 		7A6A43BC2337ADCE00EE036B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A6A43BB2337ADCE00EE036B /* GoogleService-Info.plist */; };
 		7A6A43BD2337ADCE00EE036B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A6A43BB2337ADCE00EE036B /* GoogleService-Info.plist */; };
 		7A6A43BE2337ADCE00EE036B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A6A43BB2337ADCE00EE036B /* GoogleService-Info.plist */; };
+		7A6A43C92337CCF900EE036B /* bgvid1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7A6A43C42337CCF200EE036B /* bgvid1.mp4 */; };
+		7A6A43CA2337CCF900EE036B /* bgvid1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7A6A43C42337CCF200EE036B /* bgvid1.mp4 */; };
+		7A6A43CB2337CCF900EE036B /* bgvid1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7A6A43C42337CCF200EE036B /* bgvid1.mp4 */; };
+		7A6A43CC2337CCF900EE036B /* bgvid5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7A6A43C52337CCF200EE036B /* bgvid5.mp4 */; };
+		7A6A43CD2337CCF900EE036B /* bgvid5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7A6A43C52337CCF200EE036B /* bgvid5.mp4 */; };
+		7A6A43CE2337CCF900EE036B /* bgvid5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7A6A43C52337CCF200EE036B /* bgvid5.mp4 */; };
+		7A6A43CF2337CCF900EE036B /* bgvid4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7A6A43C62337CCF300EE036B /* bgvid4.mp4 */; };
+		7A6A43D02337CCF900EE036B /* bgvid4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7A6A43C62337CCF300EE036B /* bgvid4.mp4 */; };
+		7A6A43D12337CCF900EE036B /* bgvid4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7A6A43C62337CCF300EE036B /* bgvid4.mp4 */; };
+		7A6A43D22337CCF900EE036B /* bgvid2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7A6A43C72337CCF600EE036B /* bgvid2.mp4 */; };
+		7A6A43D32337CCF900EE036B /* bgvid2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7A6A43C72337CCF600EE036B /* bgvid2.mp4 */; };
+		7A6A43D42337CCF900EE036B /* bgvid2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7A6A43C72337CCF600EE036B /* bgvid2.mp4 */; };
+		7A6A43D52337CCF900EE036B /* bgvid3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7A6A43C82337CCF900EE036B /* bgvid3.mp4 */; };
+		7A6A43D62337CCF900EE036B /* bgvid3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7A6A43C82337CCF900EE036B /* bgvid3.mp4 */; };
+		7A6A43D72337CCF900EE036B /* bgvid3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7A6A43C82337CCF900EE036B /* bgvid3.mp4 */; };
 		825639C52336B5AA005462DF /* MetricCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825639C42336B5AA005462DF /* MetricCell.swift */; };
 		825639C72336CDF3005462DF /* Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825639C62336CDF3005462DF /* Prompt.swift */; };
 		825639C92336CE7E005462DF /* knightrider-easy.json in Resources */ = {isa = PBXBuildFile; fileRef = 825639C82336CE7E005462DF /* knightrider-easy.json */; };
@@ -81,6 +96,11 @@
 		7A6A43B223379C1C00EE036B /* AppRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRecorder.swift; sourceTree = "<group>"; };
 		7A6A43B323379C1C00EE036B /* CameraRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraRecorder.swift; sourceTree = "<group>"; };
 		7A6A43BB2337ADCE00EE036B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7A6A43C42337CCF200EE036B /* bgvid1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = bgvid1.mp4; sourceTree = "<group>"; };
+		7A6A43C52337CCF200EE036B /* bgvid5.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = bgvid5.mp4; sourceTree = "<group>"; };
+		7A6A43C62337CCF300EE036B /* bgvid4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = bgvid4.mp4; sourceTree = "<group>"; };
+		7A6A43C72337CCF600EE036B /* bgvid2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = bgvid2.mp4; sourceTree = "<group>"; };
+		7A6A43C82337CCF900EE036B /* bgvid3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = bgvid3.mp4; sourceTree = "<group>"; };
 		7DA3EABDA7F45B13BFEACDA3 /* Pods_Face_Gesture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Face_Gesture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		825639C42336B5AA005462DF /* MetricCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricCell.swift; sourceTree = "<group>"; };
 		825639C62336CDF3005462DF /* Prompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prompt.swift; sourceTree = "<group>"; };
@@ -188,6 +208,34 @@
 			path = Recording;
 			sourceTree = "<group>";
 		};
+		7A6A43C02337B94F00EE036B /* Final */ = {
+			isa = PBXGroup;
+			children = (
+				7A6A43AC23379BF100EE036B /* FinalStoryboard.storyboard */,
+				7A6A43AE23379BFE00EE036B /* FinalViewController.swift */,
+			);
+			path = Final;
+			sourceTree = "<group>";
+		};
+		7A6A43C32337CCDF00EE036B /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				7A6A43C42337CCF200EE036B /* bgvid1.mp4 */,
+				7A6A43C72337CCF600EE036B /* bgvid2.mp4 */,
+				7A6A43C82337CCF900EE036B /* bgvid3.mp4 */,
+				7A6A43C62337CCF300EE036B /* bgvid4.mp4 */,
+				7A6A43C52337CCF200EE036B /* bgvid5.mp4 */,
+			);
+			path = Videos;
+			sourceTree = "<group>";
+		};
+		7A6A43D82337D1EB00EE036B /* UIEmojiKit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIEmojiKit;
+			sourceTree = "<group>";
+		};
 		82980E6423365324005F24EB = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +261,9 @@
 		82980E6F23365324005F24EB /* Face Gesture */ = {
 			isa = PBXGroup;
 			children = (
+				7A6A43D82337D1EB00EE036B /* UIEmojiKit */,
+				7A6A43C32337CCDF00EE036B /* Videos */,
+				7A6A43C02337B94F00EE036B /* Final */,
 				7A6A43B023379C0300EE036B /* Recording */,
 				C61661DD2337730E001BAB1B /* Emojis */,
 				82980EA223367BE6005F24EB /* Alpha */,
@@ -221,8 +272,6 @@
 				82980EA823368A53005F24EB /* ExpressionCell.swift */,
 				825639C42336B5AA005462DF /* MetricCell.swift */,
 				82980E7623365324005F24EB /* Main.storyboard */,
-				7A6A43AC23379BF100EE036B /* FinalStoryboard.storyboard */,
-				7A6A43AE23379BFE00EE036B /* FinalViewController.swift */,
 				825639CA2336CEA7005462DF /* TestViewController.swift */,
 				82F33C0F23377906006BA034 /* ClassifierVC.swift */,
 				82980E7B23365326005F24EB /* LaunchScreen.storyboard */,
@@ -435,11 +484,16 @@
 				825BF44923377F2C0040D9F0 /* happy.gif in Resources */,
 				825BF44B23377F2C0040D9F0 /* suprised.gif in Resources */,
 				7A6A43AD23379BF100EE036B /* FinalStoryboard.storyboard in Resources */,
+				7A6A43C92337CCF900EE036B /* bgvid1.mp4 in Resources */,
+				7A6A43CF2337CCF900EE036B /* bgvid4.mp4 in Resources */,
 				825BF44523377F2C0040D9F0 /* money.gif in Resources */,
+				7A6A43CC2337CCF900EE036B /* bgvid5.mp4 in Resources */,
 				825BF44A23377F2C0040D9F0 /* crazy.gif in Resources */,
+				7A6A43D22337CCF900EE036B /* bgvid2.mp4 in Resources */,
 				825BF44423377F2C0040D9F0 /* eyeroll.gif in Resources */,
 				7A6A43BC2337ADCE00EE036B /* GoogleService-Info.plist in Resources */,
 				825BF44E23377F2C0040D9F0 /* silly.gif in Resources */,
+				7A6A43D52337CCF900EE036B /* bgvid3.mp4 in Resources */,
 				82980E7823365324005F24EB /* Main.storyboard in Resources */,
 				825BF44823377F2C0040D9F0 /* wink.gif in Resources */,
 				825BF44723377F2C0040D9F0 /* kiss.gif in Resources */,
@@ -452,7 +506,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A6A43D32337CCF900EE036B /* bgvid2.mp4 in Resources */,
+				7A6A43CA2337CCF900EE036B /* bgvid1.mp4 in Resources */,
+				7A6A43D02337CCF900EE036B /* bgvid4.mp4 in Resources */,
 				7A6A43BD2337ADCE00EE036B /* GoogleService-Info.plist in Resources */,
+				7A6A43D62337CCF900EE036B /* bgvid3.mp4 in Resources */,
+				7A6A43CD2337CCF900EE036B /* bgvid5.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,7 +519,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A6A43D42337CCF900EE036B /* bgvid2.mp4 in Resources */,
+				7A6A43CB2337CCF900EE036B /* bgvid1.mp4 in Resources */,
+				7A6A43D12337CCF900EE036B /* bgvid4.mp4 in Resources */,
 				7A6A43BE2337ADCE00EE036B /* GoogleService-Info.plist in Resources */,
+				7A6A43D72337CCF900EE036B /* bgvid3.mp4 in Resources */,
+				7A6A43CE2337CCF900EE036B /* bgvid5.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
