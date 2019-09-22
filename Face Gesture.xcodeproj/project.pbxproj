@@ -13,6 +13,20 @@
 		825639CB2336CEA7005462DF /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825639CA2336CEA7005462DF /* TestViewController.swift */; };
 		825639CD2336D3FB005462DF /* Butler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825639CC2336D3FB005462DF /* Butler.swift */; };
 		825639CF2336E666005462DF /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825639CE2336E666005462DF /* GameScene.swift */; };
+		825BF44323377F2C0040D9F0 /* sleepy.gif in Resources */ = {isa = PBXBuildFile; fileRef = 825BF43723377F2B0040D9F0 /* sleepy.gif */; };
+		825BF44423377F2C0040D9F0 /* eyeroll.gif in Resources */ = {isa = PBXBuildFile; fileRef = 825BF43823377F2C0040D9F0 /* eyeroll.gif */; };
+		825BF44523377F2C0040D9F0 /* money.gif in Resources */ = {isa = PBXBuildFile; fileRef = 825BF43923377F2C0040D9F0 /* money.gif */; };
+		825BF44623377F2C0040D9F0 /* scream.gif in Resources */ = {isa = PBXBuildFile; fileRef = 825BF43A23377F2C0040D9F0 /* scream.gif */; };
+		825BF44723377F2C0040D9F0 /* kiss.gif in Resources */ = {isa = PBXBuildFile; fileRef = 825BF43B23377F2C0040D9F0 /* kiss.gif */; };
+		825BF44823377F2C0040D9F0 /* wink.gif in Resources */ = {isa = PBXBuildFile; fileRef = 825BF43C23377F2C0040D9F0 /* wink.gif */; };
+		825BF44923377F2C0040D9F0 /* happy.gif in Resources */ = {isa = PBXBuildFile; fileRef = 825BF43D23377F2C0040D9F0 /* happy.gif */; };
+		825BF44A23377F2C0040D9F0 /* crazy.gif in Resources */ = {isa = PBXBuildFile; fileRef = 825BF43E23377F2C0040D9F0 /* crazy.gif */; };
+		825BF44B23377F2C0040D9F0 /* suprised.gif in Resources */ = {isa = PBXBuildFile; fileRef = 825BF43F23377F2C0040D9F0 /* suprised.gif */; };
+		825BF44C23377F2C0040D9F0 /* heart.gif in Resources */ = {isa = PBXBuildFile; fileRef = 825BF44023377F2C0040D9F0 /* heart.gif */; };
+		825BF44D23377F2C0040D9F0 /* smirk.gif in Resources */ = {isa = PBXBuildFile; fileRef = 825BF44123377F2C0040D9F0 /* smirk.gif */; };
+		825BF44E23377F2C0040D9F0 /* silly.gif in Resources */ = {isa = PBXBuildFile; fileRef = 825BF44223377F2C0040D9F0 /* silly.gif */; };
+		825BF45023377F380040D9F0 /* EmojiBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825BF44F23377F380040D9F0 /* EmojiBuilder.swift */; };
+		825BF45223377F3F0040D9F0 /* EmojiSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825BF45123377F3F0040D9F0 /* EmojiSceneViewController.swift */; };
 		82980E7123365324005F24EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82980E7023365324005F24EB /* AppDelegate.swift */; };
 		82980E7523365324005F24EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82980E7423365324005F24EB /* ViewController.swift */; };
 		82980E7823365324005F24EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82980E7623365324005F24EB /* Main.storyboard */; };
@@ -52,6 +66,20 @@
 		825639CA2336CEA7005462DF /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		825639CC2336D3FB005462DF /* Butler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Butler.swift; sourceTree = "<group>"; };
 		825639CE2336E666005462DF /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		825BF43723377F2B0040D9F0 /* sleepy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sleepy.gif; sourceTree = "<group>"; };
+		825BF43823377F2C0040D9F0 /* eyeroll.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = eyeroll.gif; sourceTree = "<group>"; };
+		825BF43923377F2C0040D9F0 /* money.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = money.gif; sourceTree = "<group>"; };
+		825BF43A23377F2C0040D9F0 /* scream.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = scream.gif; sourceTree = "<group>"; };
+		825BF43B23377F2C0040D9F0 /* kiss.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = kiss.gif; sourceTree = "<group>"; };
+		825BF43C23377F2C0040D9F0 /* wink.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = wink.gif; sourceTree = "<group>"; };
+		825BF43D23377F2C0040D9F0 /* happy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = happy.gif; sourceTree = "<group>"; };
+		825BF43E23377F2C0040D9F0 /* crazy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = crazy.gif; sourceTree = "<group>"; };
+		825BF43F23377F2C0040D9F0 /* suprised.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = suprised.gif; sourceTree = "<group>"; };
+		825BF44023377F2C0040D9F0 /* heart.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = heart.gif; sourceTree = "<group>"; };
+		825BF44123377F2C0040D9F0 /* smirk.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = smirk.gif; sourceTree = "<group>"; };
+		825BF44223377F2C0040D9F0 /* silly.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = silly.gif; sourceTree = "<group>"; };
+		825BF44F23377F380040D9F0 /* EmojiBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiBuilder.swift; sourceTree = "<group>"; };
+		825BF45123377F3F0040D9F0 /* EmojiSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiSceneViewController.swift; sourceTree = "<group>"; };
 		82980E6D23365324005F24EB /* Face Gesture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Face Gesture.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82980E7023365324005F24EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82980E7423365324005F24EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -181,9 +209,9 @@
 		C61661DD2337730E001BAB1B /* Emojis */ = {
 			isa = PBXGroup;
 			children = (
+				825BF44F23377F380040D9F0 /* EmojiBuilder.swift */,
 				C61661E0233773F1001BAB1B /* Example */,
 				C61661DE23377320001BAB1B /* Assets */,
-				C61661E32337742A001BAB1B /* EmojiBuilder.swift */,
 			);
 			path = Emojis;
 			sourceTree = "<group>";
@@ -199,18 +227,18 @@
 		C61661DF23377324001BAB1B /* Gifs */ = {
 			isa = PBXGroup;
 			children = (
-				C61661ED23377830001BAB1B /* crazy.gif */,
-				C61661EC23377830001BAB1B /* eyeroll.gif */,
-				C61661F023377831001BAB1B /* heart.gif */,
-				C61661EA23377830001BAB1B /* money.gif */,
-				C61661EE23377830001BAB1B /* scream.gif */,
-				C61661EB23377830001BAB1B /* silly.gif */,
-				C61661EF23377830001BAB1B /* sleepy.gif */,
-				C61661F123377831001BAB1B /* smirk.gif */,
-				C61661E923377830001BAB1B /* suprised.gif */,
-				C61661F223377831001BAB1B /* wink.gif */,
-				C61661E723377823001BAB1B /* happy.gif */,
-				C61661E52337754C001BAB1B /* kiss.gif */,
+				825BF43E23377F2C0040D9F0 /* crazy.gif */,
+				825BF43823377F2C0040D9F0 /* eyeroll.gif */,
+				825BF43D23377F2C0040D9F0 /* happy.gif */,
+				825BF44023377F2C0040D9F0 /* heart.gif */,
+				825BF43B23377F2C0040D9F0 /* kiss.gif */,
+				825BF43923377F2C0040D9F0 /* money.gif */,
+				825BF43A23377F2C0040D9F0 /* scream.gif */,
+				825BF44223377F2C0040D9F0 /* silly.gif */,
+				825BF43723377F2B0040D9F0 /* sleepy.gif */,
+				825BF44123377F2C0040D9F0 /* smirk.gif */,
+				825BF43F23377F2C0040D9F0 /* suprised.gif */,
+				825BF43C23377F2C0040D9F0 /* wink.gif */,
 			);
 			path = Gifs;
 			sourceTree = "<group>";
@@ -218,7 +246,7 @@
 		C61661E0233773F1001BAB1B /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				C61661E123377410001BAB1B /* EmojiSceneViewController.swift */,
+				825BF45123377F3F0040D9F0 /* EmojiSceneViewController.swift */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -327,21 +355,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C61661F623377831001BAB1B /* eyeroll.gif in Resources */,
+				825BF44323377F2C0040D9F0 /* sleepy.gif in Resources */,
+				825BF44623377F2C0040D9F0 /* scream.gif in Resources */,
 				82980E7D23365326005F24EB /* LaunchScreen.storyboard in Resources */,
-				C61661F823377831001BAB1B /* scream.gif in Resources */,
-				C61661F723377831001BAB1B /* crazy.gif in Resources */,
-				C61661F923377831001BAB1B /* sleepy.gif in Resources */,
-				C61661FB23377831001BAB1B /* smirk.gif in Resources */,
 				82980EAD2336A294005F24EB /* Assets.xcassets in Resources */,
-				C61661FC23377831001BAB1B /* wink.gif in Resources */,
-				C61661F523377831001BAB1B /* silly.gif in Resources */,
-				C61661E823377823001BAB1B /* happy.gif in Resources */,
-				C61661FA23377831001BAB1B /* heart.gif in Resources */,
-				C61661F423377831001BAB1B /* money.gif in Resources */,
-				C61661E62337754C001BAB1B /* kiss.gif in Resources */,
+				825BF44D23377F2C0040D9F0 /* smirk.gif in Resources */,
+				825BF44923377F2C0040D9F0 /* happy.gif in Resources */,
+				825BF44B23377F2C0040D9F0 /* suprised.gif in Resources */,
+				825BF44523377F2C0040D9F0 /* money.gif in Resources */,
+				825BF44A23377F2C0040D9F0 /* crazy.gif in Resources */,
+				825BF44423377F2C0040D9F0 /* eyeroll.gif in Resources */,
+				825BF44E23377F2C0040D9F0 /* silly.gif in Resources */,
 				82980E7823365324005F24EB /* Main.storyboard in Resources */,
+				825BF44823377F2C0040D9F0 /* wink.gif in Resources */,
+				825BF44723377F2C0040D9F0 /* kiss.gif in Resources */,
 				825639C92336CE7E005462DF /* knightrider-easy.json in Resources */,
+				825BF44C23377F2C0040D9F0 /* heart.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,11 +397,13 @@
 			files = (
 				825639CF2336E666005462DF /* GameScene.swift in Sources */,
 				82980EA423367C06005F24EB /* Classifier.swift in Sources */,
+				825BF45023377F380040D9F0 /* EmojiBuilder.swift in Sources */,
 				825639CD2336D3FB005462DF /* Butler.swift in Sources */,
 				82980EA923368A53005F24EB /* ExpressionCell.swift in Sources */,
 				82F33C0E23377834006BA034 /* EmotionOverlayView.swift in Sources */,
 				825639C52336B5AA005462DF /* MetricCell.swift in Sources */,
 				82980E7523365324005F24EB /* ViewController.swift in Sources */,
+				825BF45223377F3F0040D9F0 /* EmojiSceneViewController.swift in Sources */,
 				825639C72336CDF3005462DF /* Prompt.swift in Sources */,
 				82F33C1023377906006BA034 /* ClassifierVC.swift in Sources */,
 				82980EA123367912005F24EB /* MasterVC.swift in Sources */,
@@ -554,7 +585,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H48B3LHXGD;
+				DEVELOPMENT_TEAM = 7EA2RMCCJ8;
 				INFOPLIST_FILE = "Face Gesture/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -572,7 +603,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H48B3LHXGD;
+				DEVELOPMENT_TEAM = 7EA2RMCCJ8;
 				INFOPLIST_FILE = "Face Gesture/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

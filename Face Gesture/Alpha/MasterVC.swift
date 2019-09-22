@@ -29,9 +29,6 @@ class MasterVC: UIViewController {
     private func detectedExpression(_ expressions: [Expression]) {
         DispatchQueue.main.async {
             for i in 0 ... self.expressions.count - 1 {
-                if let cell = self.tableView.cellForRow(at: IndexPath(item: i, section: 0)) {
-                    cell.backgroundColor = expressions.contains(self.expressions[i].expression) ? #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1) : #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-                }
             }
         }
     }
